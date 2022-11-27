@@ -39,7 +39,7 @@ const ExampleComponent = () => {
   );
 };
 
-export default Home01;
+export default ExampleComponent;
 ```
 
 * Props : 
