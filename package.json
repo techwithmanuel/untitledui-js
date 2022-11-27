@@ -1,0 +1,28 @@
+{
+  "name": "untitledui-js",
+  "version": "1.0.0",
+  "description": "A simple library with a fully customizable collection of untitledui icons",
+  "main": "src/index.ts",
+  "files": ["src/**/*"],
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/E14mayam/untitledui-js.git"
+  },
+  "author": "E14mayam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/E14mayam/untitledui-js/issues"
+  },
+  "homepage": "https://github.com/E14mayam/untitledui-js#readme",
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/react": "^18.0.25"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "typescript": "^4.9.3"
+  }
+}
