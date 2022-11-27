@@ -65,4 +65,4 @@ export default Home01;
 | home-smile | HomeSmile      |
 
 * More icons will be added
-* Cintributions are welcomed
+* Contributions are welcomed
