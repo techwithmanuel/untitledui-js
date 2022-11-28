@@ -19,7 +19,7 @@ npm install untitledui-js
 - Usage :
 
 ```js
-import { Home01 } from "untitledui-js";
+import { Home01 } from "untitledui-js/icons/home";
 
 const ExampleComponent = () => {
     width = "24"

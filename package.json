@@ -1,9 +1,11 @@
 {
   "name": "untitledui-js",
-  "version": "1.0.0",
+  "version": "1.0.09",
   "description": "A simple library with a fully customizable collection of untitledui icons",
   "main": "src/index.ts",
-  "files": ["src/**/*"],
+  "files": [
+    "icons/**/*"
+  ],
   "scripts": {
     "test": "start"
   },
@@ -23,6 +25,7 @@
   },
   "dependencies": {
     "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "typescript": "^4.9.3"
   }
 }
