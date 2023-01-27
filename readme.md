@@ -63,6 +63,14 @@ export default ExampleComponent;
 | home-04  | Home04       |
 | home-05 | Home05      |
 | home-smile | HomeSmile      |
+| building-01    | Building01      |
+| building-02  | Building02      |
+| building-03  | Building03       |
+| building-04  | Building04       |
+| building-05 | Building05      |
+| building-06 | Building06      |
+| building-07 | Building07      |
+| building-08 | Building08      |
 
 * More icons will be added
 * Contributions are welcomed
