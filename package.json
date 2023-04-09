@@ -2,12 +2,14 @@
   "name": "untitledui-js",
   "version": "1.0.09",
   "description": "A simple library with a fully customizable collection of untitledui icons",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.js",
   "files": [
-    "icons/**/*"
+    "dist/**/*"
   ],
   "scripts": {
-    "test": "start"
+    "test": "start",
+    "build": "webpack --mode production && tsc --declaration"
   },
   "repository": {
     "type": "git",
@@ -20,12 +22,20 @@
   },
   "homepage": "https://github.com/E14mayam/untitledui-js#readme",
   "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/parser": "^7.21.4",
+    "@stavalfi/babel-plugin-module-resolver-loader": "^1.4.0",
     "@tsconfig/recommended": "^1.0.1",
-    "@types/react": "^18.0.25"
+    "@types/react": "^18.0.25",
+    "webpack": "^5.78.0",
+    "webpack-cli": "^5.0.1"
   },
   "dependencies": {
+    "babel-loader": "^9.1.2",
+    "class-variance-authority": "^0.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "ts-loader": "^9.4.2",
     "typescript": "^4.9.3"
   }
 }

@@ -1,4 +1,4 @@
-<img src="./images/logo.png">
+<img src="./public/logo.png">
 
 # Untitled UI - JS
 
@@ -53,7 +53,7 @@ export default ExampleComponent;
 | strokeColor  | string       |
 
 # Available Icons
-<img src="./images/icons.png">
+<img src="./public/icons.png">
 
 | Untitled Icon    | Naming Covention |
 | ----------- | ----------- |
