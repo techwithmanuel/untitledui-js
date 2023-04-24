@@ -6,7 +6,7 @@
 
 - ### 🛠 Supports `.js` `.ts` `.tsx` `.jsx` extensions ; completely typesafe
 - ### 🚀 All icons are sourced from Untitled UI
-- ### ⚡ Completed with **500+** Icons
+- ### ⚡ Completed with **1100+** Icons
 - ### 🤝🏽Support and contributions are welcomed
 - ### 🤗 Currently available for React but Vue js & Qwik js versions are in development
 
