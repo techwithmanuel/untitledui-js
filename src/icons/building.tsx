@@ -1,9 +1,5 @@
 import SVG from "../template";
-import { FC, SVGProps } from "react";
-
-export interface SVGComponentProps extends FC<SVGProps<SVGSVGElement>> {
-  size?: string;
-}
+import { SVGComponentProps } from "./home";
 
 const Building01: SVGComponentProps = ({ ...props }) => {
   return (
