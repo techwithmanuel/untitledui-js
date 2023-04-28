@@ -1,76 +1,47 @@
 <img src="./public/logo.png">
 
-# Untitled UI - JS
+# Untitled UI Icons
 
-A fully customizable collection of icons from untitled ui.
+### A collection of fully customizable icons from Untitled UI
 
-- Written in React Typescript
-- All icons are sourced from Untitled UI's free pack
-- Contributions are welcomed
+- ### 🛠 Supports `.js` `.ts` `.tsx` `.jsx` extensions ; completely typesafe
+- ### 🚀 All icons are sourced from Untitled UI
+- ### ⚡ Completed with **500+** Icons
+- ### 🤝🏽Support and contributions are welcomed
+- ### 🤗 Currently available for React but Vue js & Qwik js versions are in development
 
 # Docs
 
-- npm install :
+- ### npm install :
 
 ```js
 npm install untitledui-js
 ```
 
-- Usage :
+- ### Usage :
 
-```js
-import { Home01 } from "untitledui-js/icons/home";
+```jsx
+import { useRef } from "react";
+import { Home01 } from "untitledui-js";
 
 const ExampleComponent = () => {
-    width = "24"
-    height = "24"
-    fill = "none"
-    strokeWidth = "2"
-    strokeColor = "black"
-
+  const ref = useRef(null);
+  
   return (
-    <Home01
-      width={width}
-      height={height}
-      fill={fill}
-      strokeWidth={strokeWidth}
-      strokeColor={strokeColor}
-    />
-  );
+
+     <Home01 ref={ref} size="60px" stroke="2px" {...props} />
+
+  )
 };
 
 export default ExampleComponent;
 ```
 
-* Props : 
-
-| Props     | Types |
-| ----------- | ----------- |
-| width     | string      |
-| height   | string       |
-| fill  | string       |
-| strokeWidth  | string       |
-| strokeColor  | string       |
-
-# Available Icons
 <img src="./public/icons.png">
 
-| Untitled Icon    | Naming Covention |
-| ----------- | ----------- |
-| home-01    | Home01      |
-| home-02  | Home02      |
-| home-03  | Home03       |
-| home-04  | Home04       |
-| home-05 | Home05      |
-| home-smile | HomeSmile      |
-| building-01    | Building01      |
-| building-02  | Building02      |
-| building-03  | Building03       |
-| building-04  | Building04       |
-| building-05 | Building05      |
-| building-06 | Building06      |
-| building-07 | Building07      |
-| building-08 | Building08      |
+- ### **Props** : All Components have access to all SVG properties like  `className, stroke, strokeWidth, fill, strokeColor, etc`
 
-* More icons will be added
-* Contributions are welcomed
+- ### **Naming Convention** : Components are defined with Camelcase. for example `home-01 -> Home01, activity-01 -> Activity01`
+
+- ### **Icon Categories** : Covers full range of untilted icons categories essentially, all icons are available
+

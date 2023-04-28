@@ -1,11 +1,15 @@
 {
   "name": "untitledui-js",
-  "version": "1.0.09",
+  "version": "1.0.014",
   "description": "A simple library with a fully customizable collection of untitledui icons",
-  "main": "dist/index.js",
-  "types": "dist/index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.js",
   "files": [
-    "dist/**/*"
+    "lib/icons/**/*",
+    "lib/index.js",
+    "lib/index.d.ts",
+    "lib/template.js",
+    "lib/template.d.ts"
   ],
   "scripts": {
     "test": "start",
