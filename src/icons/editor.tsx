@@ -1,1493 +1,1244 @@
-import SVG from "../template";
-import { SVGComponentProps } from "./home";
+import { SVG, Path } from "../template";
+import { FC } from "react";
+import { SVGComponentProps } from "./types";
 
-export const AlignCenter: SVGComponentProps = ({ ...props }) => {
+export const AlignCenter: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
-        d="M18 10H6M21 6H3M21 14H3M18 18H6"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
+      <Path d="M18 10H6M21 6H3M21 14H3M18 18H6" {...pathProps} />
     </SVG>
   );
 };
 
-export const AlignJustify: SVGComponentProps = ({ ...props }) => {
+export const AlignJustify: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
-        d="M21 10H3M21 18H3M21 6H3M21 14H3"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
+      <Path d="M21 10H3M21 18H3M21 6H3M21 14H3" {...pathProps} />
     </SVG>
   );
 };
 
-export const AlignLeft: SVGComponentProps = ({ ...props }) => {
+export const AlignLeft: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
-        d="M16 10H3M20 6H3M20 14H3M16 18H3"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
+      <Path d="M16 10H3M20 6H3M20 14H3M16 18H3" {...pathProps} />
     </SVG>
   );
 };
 
-export const AlignRight: SVGComponentProps = ({ ...props }) => {
+export const AlignRight: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
-        d="M21 10H8M21 6H4M21 14H4M21 18H8"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
+      <Path d="M21 10H8M21 6H4M21 14H4M21 18H8" {...pathProps} />
     </SVG>
   );
 };
 
-export const Attachment01: SVGComponentProps = ({ ...props }) => {
+export const Attachment01: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M21.1525 10.8995L12.1369 19.9151C10.0866 21.9653 6.7625 21.9653 4.71225 19.9151C2.662 17.8648 2.662 14.5407 4.71225 12.4904L13.7279 3.47483C15.0947 2.108 17.3108 2.108 18.6776 3.47483C20.0444 4.84167 20.0444 7.05775 18.6776 8.42458L10.0156 17.0866C9.33213 17.7701 8.22409 17.7701 7.54068 17.0866C6.85726 16.4032 6.85726 15.2952 7.54068 14.6118L15.1421 7.01037"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Attachment02: SVGComponentProps = ({ ...props }) => {
+export const Attachment02: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M17.5 5.25581V16.5C17.5 19.5376 15.0376 22 12 22C8.96243 22 6.5 19.5376 6.5 16.5V5.66667C6.5 3.64162 8.14162 2 10.1667 2C12.1917 2 13.8333 3.64162 13.8333 5.66667V16.4457C13.8333 17.4583 13.0125 18.2791 12 18.2791C10.9875 18.2791 10.1667 17.4583 10.1667 16.4457V6.65116"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const BezierCurve01: SVGComponentProps = ({ ...props }) => {
+export const BezierCurve01: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M10 7L3 7M21 7L14 7M14 7.25195C17.4505 8.14004 20 11.2722 20 14.9999M4 14.9999C4 11.2722 6.54955 8.14004 10 7.25195M3.6 19H4.4C4.96005 19 5.24008 19 5.45399 18.891C5.64215 18.7951 5.79513 18.6422 5.89101 18.454C6 18.2401 6 17.9601 6 17.4V16.6C6 16.0399 6 15.7599 5.89101 15.546C5.79513 15.3578 5.64215 15.2049 5.45399 15.109C5.24008 15 4.96005 15 4.4 15H3.6C3.03995 15 2.75992 15 2.54601 15.109C2.35785 15.2049 2.20487 15.3578 2.10899 15.546C2 15.7599 2 16.0399 2 16.6V17.4C2 17.9601 2 18.2401 2.10899 18.454C2.20487 18.6422 2.35785 18.7951 2.54601 18.891C2.75992 19 3.03995 19 3.6 19ZM11.6 9H12.4C12.9601 9 13.2401 9 13.454 8.89101C13.6422 8.79513 13.7951 8.64215 13.891 8.45399C14 8.24008 14 7.96005 14 7.4V6.6C14 6.03995 14 5.75992 13.891 5.54601C13.7951 5.35785 13.6422 5.20487 13.454 5.10899C13.2401 5 12.9601 5 12.4 5H11.6C11.0399 5 10.7599 5 10.546 5.10899C10.3578 5.20487 10.2049 5.35785 10.109 5.54601C10 5.75992 10 6.03995 10 6.6V7.4C10 7.96005 10 8.24008 10.109 8.45399C10.2049 8.64215 10.3578 8.79513 10.546 8.89101C10.7599 9 11.0399 9 11.6 9ZM19.6 19H20.4C20.9601 19 21.2401 19 21.454 18.891C21.6422 18.7951 21.7951 18.6422 21.891 18.454C22 18.2401 22 17.9601 22 17.4V16.6C22 16.0399 22 15.7599 21.891 15.546C21.7951 15.3578 21.6422 15.2049 21.454 15.109C21.2401 15 20.9601 15 20.4 15H19.6C19.0399 15 18.7599 15 18.546 15.109C18.3578 15.2049 18.2049 15.3578 18.109 15.546C18 15.7599 18 16.0399 18 16.6V17.4C18 17.9601 18 18.2401 18.109 18.454C18.2049 18.6422 18.3578 18.7951 18.546 18.891C18.7599 19 19.0399 19 19.6 19ZM22 7C22 7.55228 21.5523 8 21 8C20.4477 8 20 7.55228 20 7C20 6.44772 20.4477 6 21 6C21.5523 6 22 6.44772 22 7ZM4 7C4 7.55228 3.55228 8 3 8C2.44772 8 2 7.55228 2 7C2 6.44772 2.44772 6 3 6C3.55228 6 4 6.44772 4 7Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const BezierCurve02: SVGComponentProps = ({ ...props }) => {
+export const BezierCurve02: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M9.9998 20.2633C6.91189 19.5185 4.48131 17.0879 3.73662 13.9999M20.2636 14C19.5188 17.0879 17.0883 19.5185 14.0004 20.2633M14.0002 3.73657C17.0882 4.48129 19.5188 6.91193 20.2636 9.99989M3.73682 10C4.48152 6.91199 6.9122 4.4813 10.0002 3.73657M3.6 14H4.4C4.96005 14 5.24008 14 5.45399 13.891C5.64215 13.7951 5.79513 13.6422 5.89101 13.454C6 13.2401 6 12.9601 6 12.4V11.6C6 11.0399 6 10.7599 5.89101 10.546C5.79513 10.3578 5.64215 10.2049 5.45399 10.109C5.24008 10 4.96005 10 4.4 10H3.6C3.03995 10 2.75992 10 2.54601 10.109C2.35785 10.2049 2.20487 10.3578 2.10899 10.546C2 10.7599 2 11.0399 2 11.6V12.4C2 12.9601 2 13.2401 2.10899 13.454C2.20487 13.6422 2.35785 13.7951 2.54601 13.891C2.75992 14 3.03995 14 3.6 14ZM19.6 14H20.4C20.9601 14 21.2401 14 21.454 13.891C21.6422 13.7951 21.7951 13.6422 21.891 13.454C22 13.2401 22 12.9601 22 12.4V11.6C22 11.0399 22 10.7599 21.891 10.546C21.7951 10.3578 21.6422 10.2049 21.454 10.109C21.2401 10 20.9601 10 20.4 10H19.6C19.0399 10 18.7599 10 18.546 10.109C18.3578 10.2049 18.2049 10.3578 18.109 10.546C18 10.7599 18 11.0399 18 11.6V12.4C18 12.9601 18 13.2401 18.109 13.454C18.2049 13.6422 18.3578 13.7951 18.546 13.891C18.7599 14 19.0399 14 19.6 14ZM11.6 6H12.4C12.9601 6 13.2401 6 13.454 5.89101C13.6422 5.79513 13.7951 5.64215 13.891 5.45399C14 5.24008 14 4.96005 14 4.4V3.6C14 3.03995 14 2.75992 13.891 2.54601C13.7951 2.35785 13.6422 2.20487 13.454 2.10899C13.2401 2 12.9601 2 12.4 2H11.6C11.0399 2 10.7599 2 10.546 2.10899C10.3578 2.20487 10.2049 2.35785 10.109 2.54601C10 2.75992 10 3.03995 10 3.6V4.4C10 4.96005 10 5.24008 10.109 5.45399C10.2049 5.64215 10.3578 5.79513 10.546 5.89101C10.7599 6 11.0399 6 11.6 6ZM11.6 22H12.4C12.9601 22 13.2401 22 13.454 21.891C13.6422 21.7951 13.7951 21.6422 13.891 21.454C14 21.2401 14 20.9601 14 20.4V19.6C14 19.0399 14 18.7599 13.891 18.546C13.7951 18.3578 13.6422 18.2049 13.454 18.109C13.2401 18 12.9601 18 12.4 18H11.6C11.0399 18 10.7599 18 10.546 18.109C10.3578 18.2049 10.2049 18.3578 10.109 18.546C10 18.7599 10 19.0399 10 19.6V20.4C10 20.9601 10 21.2401 10.109 21.454C10.2049 21.6422 10.3578 21.7951 10.546 21.891C10.7599 22 11.0399 22 11.6 22Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const BezierCurve03: SVGComponentProps = ({ ...props }) => {
+export const BezierCurve03: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M10.8571 7L5.14286 17M6 19H17.9998M18.8571 17L13.1429 7M3.6 21H4.4C4.96005 21 5.24008 21 5.45399 20.891C5.64215 20.7951 5.79513 20.6422 5.89101 20.454C6 20.2401 6 19.9601 6 19.4V18.6C6 18.0399 6 17.7599 5.89101 17.546C5.79513 17.3578 5.64215 17.2049 5.45399 17.109C5.24008 17 4.96005 17 4.4 17H3.6C3.03995 17 2.75992 17 2.54601 17.109C2.35785 17.2049 2.20487 17.3578 2.10899 17.546C2 17.7599 2 18.0399 2 18.6V19.4C2 19.9601 2 20.2401 2.10899 20.454C2.20487 20.6422 2.35785 20.7951 2.54601 20.891C2.75992 21 3.03995 21 3.6 21ZM19.6 21H20.4C20.9601 21 21.2401 21 21.454 20.891C21.6422 20.7951 21.7951 20.6422 21.891 20.454C22 20.2401 22 19.9601 22 19.4V18.6C22 18.0399 22 17.7599 21.891 17.546C21.7951 17.3578 21.6422 17.2049 21.454 17.109C21.2401 17 20.9601 17 20.4 17H19.6C19.0399 17 18.7599 17 18.546 17.109C18.3578 17.2049 18.2049 17.3578 18.109 17.546C18 17.7599 18 18.0399 18 18.6V19.4C18 19.9601 18 20.2401 18.109 20.454C18.2049 20.6422 18.3578 20.7951 18.546 20.891C18.7599 21 19.0399 21 19.6 21ZM11.6 7H12.4C12.9601 7 13.2401 7 13.454 6.89101C13.6422 6.79513 13.7951 6.64215 13.891 6.45399C14 6.24008 14 5.96005 14 5.4V4.6C14 4.03995 14 3.75992 13.891 3.54601C13.7951 3.35785 13.6422 3.20487 13.454 3.10899C13.2401 3 12.9601 3 12.4 3H11.6C11.0399 3 10.7599 3 10.546 3.10899C10.3578 3.20487 10.2049 3.35785 10.109 3.54601C10 3.75992 10 4.03995 10 4.6V5.4C10 5.96005 10 6.24008 10.109 6.45399C10.2049 6.64215 10.3578 6.79513 10.546 6.89101C10.7599 7 11.0399 7 11.6 7Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Bold01: SVGComponentProps = ({ ...props }) => {
+export const Bold01: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M6 12H14C16.2091 12 18 10.2091 18 8C18 5.79086 16.2091 4 14 4H6V12ZM6 12H15C17.2091 12 19 13.7909 19 16C19 18.2091 17.2091 20 15 20H6V12Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Bold02: SVGComponentProps = ({ ...props }) => {
+export const Bold02: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M6 4V20M9.5 4H15.5C17.7091 4 19.5 5.79086 19.5 8C19.5 10.2091 17.7091 12 15.5 12H9.5H16.5C18.7091 12 20.5 13.7909 20.5 16C20.5 18.2091 18.7091 20 16.5 20H9.5M9.5 4V20M9.5 4H4M9.5 20H4"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const BoldSquare: SVGComponentProps = ({ ...props }) => {
+export const BoldSquare: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M8.5 12H13C14.3807 12 15.5 10.8807 15.5 9.5C15.5 8.11929 14.3807 7 13 7H8.5V12ZM8.5 12H14C15.3807 12 16.5 13.1193 16.5 14.5C16.5 15.8807 15.3807 17 14 17H8.5V12ZM7.8 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V7.8C21 6.11984 21 5.27976 20.673 4.63803C20.3854 4.07354 19.9265 3.6146 19.362 3.32698C18.7202 3 17.8802 3 16.2 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Brush01: SVGComponentProps = ({ ...props }) => {
+export const Brush01: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M8.99997 11.2224L12.7778 15.0002M7.97485 20.975C6.60801 22.3419 4 22.0002 2 22.0002C3.0251 20.0002 1.65827 17.3921 3.0251 16.0253C4.39194 14.6585 6.60801 14.6585 7.97485 16.0253C9.34168 17.3921 9.34168 19.6082 7.97485 20.975ZM11.9216 15.9248L21.0587 6.05671C21.8635 5.18755 21.8375 3.83776 20.9999 3.00017C20.1624 2.16258 18.8126 2.13663 17.9434 2.94141L8.07534 12.0785C7.5654 12.5507 7.31043 12.7868 7.16173 13.0385C6.80514 13.6423 6.79079 14.3887 7.12391 15.0057C7.26283 15.2631 7.50853 15.5088 7.99995 16.0002C8.49136 16.4916 8.73707 16.7373 8.99438 16.8762C9.6114 17.2093 10.3578 17.195 10.9616 16.8384C11.2134 16.6897 11.4494 16.4347 11.9216 15.9248Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Brush02: SVGComponentProps = ({ ...props }) => {
+export const Brush02: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M18 10V3.6C18 3.03995 18 2.75992 17.891 2.54601C17.7951 2.35785 17.6422 2.20487 17.454 2.10899C17.2401 2 16.9601 2 16.4 2H7.6C7.03995 2 6.75992 2 6.54601 2.10899C6.35785 2.20487 6.20487 2.35785 6.10899 2.54601C6 2.75992 6 3.03995 6 3.6V10M18 10H6M18 10V10.2C18 11.8802 18 12.7202 17.673 13.362C17.3854 13.9265 16.9265 14.3854 16.362 14.673C15.7202 15 14.8802 15 13.2 15H10.8C9.11984 15 8.27976 15 7.63803 14.673C7.07354 14.3854 6.6146 13.9265 6.32698 13.362C6 12.7202 6 11.8802 6 10.2V10M14.5 15V19.5C14.5 20.8807 13.3807 22 12 22C10.6193 22 9.5 20.8807 9.5 19.5V15"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Brush03: SVGComponentProps = ({ ...props }) => {
+export const Brush03: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M20 10V3.6C20 3.03995 20 2.75992 19.891 2.54601C19.7951 2.35785 19.6422 2.20487 19.454 2.10899C19.2401 2 18.9601 2 18.4 2H5.6C5.03995 2 4.75992 2 4.54601 2.10899C4.35785 2.20487 4.20487 2.35785 4.10899 2.54601C4 2.75992 4 3.03995 4 3.6V10M20 10H4M20 10V10.2C20 11.8802 20 12.7202 19.673 13.362C19.3854 13.9265 18.9265 14.3854 18.362 14.673C17.7202 15 16.8802 15 15.2 15H8.8C7.11984 15 6.27976 15 5.63803 14.673C5.07354 14.3854 4.6146 13.9265 4.32698 13.362C4 12.7202 4 11.8802 4 10.2V10M14.5 15V19.5C14.5 20.8807 13.3807 22 12 22C10.6193 22 9.5 20.8807 9.5 19.5V15"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const CircleCut: SVGComponentProps = ({ ...props }) => {
+export const CircleCut: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M7 20.6622C9.98901 18.9331 12 15.7014 12 12C12 8.29859 9.98901 5.06687 7 3.33782M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const CodeSnippet01: SVGComponentProps = ({ ...props }) => {
+export const CodeSnippet01: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
-        d="M16 18L22 12L16 6M8 6L2 12L8 18"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
+      <Path d="M16 18L22 12L16 6M8 6L2 12L8 18" {...pathProps} />
     </SVG>
   );
 };
 
-export const CodeSnippet02: SVGComponentProps = ({ ...props }) => {
+export const CodeSnippet02: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
-        d="M17 17L22 12L17 7M7 7L2 12L7 17M14 3L10 21"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
+      <Path d="M17 17L22 12L17 7M7 7L2 12L7 17M14 3L10 21" {...pathProps} />
     </SVG>
   );
 };
 
-export const Colors: SVGComponentProps = ({ ...props }) => {
+export const Colors: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M12 20.4722C13.0615 21.4223 14.4633 22 16 22C19.3137 22 22 19.3137 22 16C22 13.2331 20.1271 10.9036 17.5798 10.2102M6.42018 10.2102C3.87293 10.9036 2 13.2331 2 16C2 19.3137 4.68629 22 8 22C11.3137 22 14 19.3137 14 16C14 15.2195 13.851 14.4738 13.5798 13.7898M18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Command: SVGComponentProps = ({ ...props }) => {
+export const Command: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M9 9V6C9 4.34315 7.65685 3 6 3C4.34315 3 3 4.34315 3 6C3 7.65685 4.34315 9 6 9H9ZM9 9V15M9 9H15M9 15V18C9 19.6569 7.65685 21 6 21C4.34315 21 3 19.6569 3 18C3 16.3431 4.34315 15 6 15H9ZM9 15H15M15 15H18C19.6569 15 21 16.3431 21 18C21 19.6569 19.6569 21 18 21C16.3431 21 15 19.6569 15 18V15ZM15 15V9M15 9V6C15 4.34315 16.3431 3 18 3C19.6569 3 21 4.34315 21 6C21 7.65685 19.6569 9 18 9H15Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Contrast01: SVGComponentProps = ({ ...props }) => {
+export const Contrast01: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M12 2C12.5917 2 13.1713 2.05139 13.7348 2.14994M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22M12 2V22M17.738 3.809C18.6922 4.47869 19.5241 5.31089 20.1934 6.26541M21.8501 10.2656C21.9486 10.8289 22 11.4085 22 12C22 12.5915 21.9486 13.1711 21.8501 13.7344M20.1892 17.7406C19.5203 18.693 18.6896 19.5233 17.7369 20.1917M13.7328 21.8504C13.17 21.9487 12.591 22 12 22"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Contrast02: SVGComponentProps = ({ ...props }) => {
+export const Contrast02: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
-      <path
+      <Path
         d="M12 18.5C15.5899 18.5 18.5 15.5899 18.5 12C18.5 8.41015 15.5899 5.5 12 5.5V18.5Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Contrast03: SVGComponentProps = ({ ...props }) => {
+export const Contrast03: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
-      <path
+      <Path
         d="M16 8.5C16 12.6421 12.6421 16 8.5 16C7.88534 16 7.28795 15.9261 6.71623 15.7866C7.89585 17.4297 9.82294 18.5 12 18.5C15.5899 18.5 18.5 15.5899 18.5 12C18.5 9.82294 17.4297 7.89585 15.7866 6.71623C15.9261 7.28795 16 7.88534 16 8.5Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Crop01: SVGComponentProps = ({ ...props }) => {
+export const Crop01: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M2 6H14.8C15.9201 6 16.4802 6 16.908 6.21799C17.2843 6.40973 17.5903 6.71569 17.782 7.09202C18 7.51984 18 8.07989 18 9.2V22M22 18L9.2 18C8.07989 18 7.51984 18 7.09202 17.782C6.71569 17.5903 6.40973 17.2843 6.21799 16.908C6 16.4802 6 15.9201 6 14.8V2"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Crop02: SVGComponentProps = ({ ...props }) => {
+export const Crop02: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M10 6H14.8C15.9201 6 16.4802 6 16.908 6.21799C17.2843 6.40973 17.5903 6.71569 17.782 7.09202C18 7.51984 18 8.07989 18 9.2V14M2 6H6M18 18V22M22 18L9.2 18C8.07989 18 7.51984 18 7.09202 17.782C6.71569 17.5903 6.40973 17.2843 6.21799 16.908C6 16.4802 6 15.9201 6 14.8V2"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Cursor01: SVGComponentProps = ({ ...props }) => {
+export const Cursor01: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M12.9999 12.9999L18.9999 18.9999M17.964 10.7512L12.9533 12.4531C12.8163 12.4996 12.7478 12.5229 12.6908 12.562C12.6404 12.5967 12.5967 12.6404 12.562 12.6908C12.5229 12.7478 12.4996 12.8163 12.4531 12.9533L10.7512 17.964C10.5402 18.5854 10.4346 18.896 10.2696 18.99C10.1267 19.0713 9.95281 19.0772 9.80468 19.0056C9.63374 18.923 9.50756 18.6201 9.25521 18.0144L3.74699 4.79312C3.51283 4.23109 3.39576 3.95007 3.45272 3.77426C3.50214 3.62172 3.62172 3.50214 3.77426 3.45272C3.95007 3.39576 4.23109 3.51283 4.79312 3.74699L18.0144 9.25521C18.6201 9.50756 18.923 9.63374 19.0056 9.80468C19.0772 9.95281 19.0713 10.1267 18.99 10.2696C18.896 10.4346 18.5854 10.5402 17.964 10.7512Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Cursor02: SVGComponentProps = ({ ...props }) => {
+export const Cursor02: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M20.5056 10.7754C21.1225 10.5355 21.431 10.4155 21.5176 10.2459C21.5926 10.099 21.5903 9.92446 21.5115 9.77954C21.4205 9.61226 21.109 9.50044 20.486 9.2768L4.59629 3.5728C4.0866 3.38983 3.83175 3.29835 3.66514 3.35605C3.52029 3.40621 3.40645 3.52004 3.35629 3.6649C3.29859 3.8315 3.39008 4.08635 3.57304 4.59605L9.277 20.4858C9.50064 21.1088 9.61246 21.4203 9.77973 21.5113C9.92465 21.5901 10.0991 21.5924 10.2461 21.5174C10.4157 21.4308 10.5356 21.1223 10.7756 20.5054L13.3724 13.8278C13.4194 13.707 13.4429 13.6466 13.4792 13.5957C13.5114 13.5506 13.5508 13.5112 13.5959 13.479C13.6468 13.4427 13.7072 13.4192 13.828 13.3722L20.5056 10.7754Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Cursor03: SVGComponentProps = ({ ...props }) => {
+export const Cursor03: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M4.71152 3.67446C4.17096 3.46151 3.90067 3.35504 3.72846 3.41232C3.57892 3.46207 3.46158 3.5794 3.41184 3.72894C3.35455 3.90116 3.46102 4.17144 3.67397 4.71201L8.97461 18.1675C9.14612 18.6028 9.23188 18.8205 9.37164 18.9079C9.49348 18.9841 9.64219 19.0041 9.77986 18.963C9.93778 18.9158 10.0782 18.7286 10.3589 18.3542L12.4996 15.5001L15.9489 20.2429C16.1385 20.5036 16.2334 20.634 16.3542 20.6885C16.4602 20.7363 16.5796 20.7457 16.6918 20.715C16.8196 20.68 16.9336 20.566 17.1616 20.338L20.3376 17.1621C20.5655 16.9341 20.6795 16.8201 20.7145 16.6923C20.7452 16.5801 20.7359 16.4607 20.688 16.3547C20.6335 16.2338 20.5032 16.139 20.2424 15.9494L15.4996 12.5001L18.3538 10.3594C18.7281 10.0787 18.9153 9.93827 18.9625 9.78035C19.0036 9.64268 18.9836 9.49397 18.9074 9.37213C18.82 9.23237 18.6024 9.14661 18.167 8.97509L4.71152 3.67446Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Cursor04: SVGComponentProps = ({ ...props }) => {
+export const Cursor04: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M4.40701 3.41403C3.94876 3.27925 3.71963 3.21186 3.56363 3.27001C3.42768 3.32069 3.32045 3.42793 3.26977 3.56387C3.21162 3.71988 3.27901 3.949 3.41379 4.40726L7.61969 18.7073C7.74493 19.1332 7.80756 19.3461 7.93395 19.4449C8.04424 19.5312 8.18564 19.5672 8.32377 19.5443C8.48206 19.5181 8.639 19.3611 8.95286 19.0473L11.9999 16.0002L16.4343 20.4345C16.6323 20.6325 16.7313 20.7315 16.8454 20.7686C16.9459 20.8012 17.054 20.8012 17.1545 20.7686C17.2686 20.7315 17.3676 20.6325 17.5656 20.4345L20.4343 17.5659C20.6323 17.3679 20.7313 17.2689 20.7684 17.1547C20.801 17.0543 20.801 16.9461 20.7684 16.8457C20.7313 16.7315 20.6323 16.6325 20.4343 16.4345L15.9999 12.0002L19.047 8.95311C19.3609 8.63924 19.5178 8.48231 19.5441 8.32402C19.567 8.18589 19.5309 8.04448 19.4447 7.93419C19.3458 7.8078 19.1329 7.74518 18.7071 7.61993L4.40701 3.41403Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const CursorBox: SVGComponentProps = ({ ...props }) => {
+export const CursorBox: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M21 9.5V7.8C21 6.11984 21 5.27976 20.673 4.63803C20.3854 4.07354 19.9265 3.6146 19.362 3.32698C18.7202 3 17.8802 3 16.2 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21H9.5M17.3862 17.7113L15.6879 20.8653C15.4103 21.3808 15.2715 21.6386 15.1023 21.7059C14.9555 21.7643 14.7896 21.7498 14.6551 21.6668C14.5001 21.5712 14.4081 21.2933 14.2241 20.7375L11.5004 12.5113C11.3392 12.0245 11.2586 11.7812 11.3166 11.6191C11.367 11.478 11.478 11.367 11.6191 11.3166C11.7812 11.2586 12.0245 11.3392 12.5113 11.5004L20.7374 14.2241C21.2933 14.4082 21.5712 14.5002 21.6668 14.6551C21.7498 14.7897 21.7642 14.9555 21.7058 15.1024C21.6386 15.2715 21.3808 15.4103 20.8652 15.6879L17.7113 17.3862C17.6328 17.4285 17.5935 17.4497 17.5591 17.4768C17.5286 17.501 17.501 17.5286 17.4768 17.5591C17.4497 17.5935 17.4285 17.6328 17.3862 17.7113Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const CursorClick01: SVGComponentProps = ({ ...props }) => {
+export const CursorClick01: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M9 3.5V2M5.06066 5.06066L4 4M5.06066 13L4 14.0607M13 5.06066L14.0607 4M3.5 9H2M15.8645 16.1896L13.3727 20.817C13.0881 21.3457 12.9457 21.61 12.7745 21.6769C12.6259 21.7349 12.4585 21.7185 12.324 21.6328C12.1689 21.534 12.0806 21.2471 11.9038 20.6733L8.44519 9.44525C8.3008 8.97651 8.2286 8.74213 8.28669 8.58383C8.33729 8.44595 8.44595 8.33729 8.58383 8.2867C8.74213 8.22861 8.9765 8.3008 9.44525 8.44519L20.6732 11.9038C21.247 12.0806 21.5339 12.169 21.6327 12.324C21.7185 12.4586 21.7348 12.6259 21.6768 12.7745C21.61 12.9458 21.3456 13.0881 20.817 13.3728L16.1896 15.8645C16.111 15.9068 16.0717 15.9279 16.0374 15.9551C16.0068 15.9792 15.9792 16.0068 15.9551 16.0374C15.9279 16.0717 15.9068 16.111 15.8645 16.1896Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const CursorClick02: SVGComponentProps = ({ ...props }) => {
+export const CursorClick02: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M9 3.5V2M5.06066 5.06066L4 4M5.06066 13L4 14.0607M13 5.06066L14.0607 4M3.5 9H2M8.5 8.5L12.6111 21.2778L15.5 18.3889L19.1111 22L22 19.1111L18.3889 15.5L21.2778 12.6111L8.5 8.5Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Delete: SVGComponentProps = ({ ...props }) => {
+export const Delete: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M17 9L11 15M11 9L17 15M2.72 12.96L7.04 18.72C7.392 19.1893 7.568 19.424 7.79105 19.5932C7.9886 19.7432 8.21232 19.855 8.45077 19.9231C8.72 20 9.01334 20 9.6 20H17.2C18.8802 20 19.7202 20 20.362 19.673C20.9265 19.3854 21.3854 18.9265 21.673 18.362C22 17.7202 22 16.8802 22 15.2V8.8C22 7.11984 22 6.27976 21.673 5.63803C21.3854 5.07354 20.9265 4.6146 20.362 4.32698C19.7202 4 18.8802 4 17.2 4H9.6C9.01334 4 8.72 4 8.45077 4.07689C8.21232 4.14499 7.9886 4.25685 7.79105 4.40675C7.568 4.576 7.392 4.81067 7.04 5.28L2.72 11.04C2.46181 11.3843 2.33271 11.5564 2.28294 11.7454C2.23902 11.9123 2.23902 12.0877 2.28294 12.2546C2.33271 12.4436 2.46181 12.6157 2.72 12.96Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const DotPoints01: SVGComponentProps = ({ ...props }) => {
+export const DotPoints01: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M21 12L9 12M21 6L9 6M21 18L9 18M5 12C5 12.5523 4.55228 13 4 13C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11C4.55228 11 5 11.4477 5 12ZM5 6C5 6.55228 4.55228 7 4 7C3.44772 7 3 6.55228 3 6C3 5.44772 3.44772 5 4 5C4.55228 5 5 5.44772 5 6ZM5 18C5 18.5523 4.55228 19 4 19C3.44772 19 3 18.5523 3 18C3 17.4477 3.44772 17 4 17C4.55228 17 5 17.4477 5 18Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const DotPoints02: SVGComponentProps = ({ ...props }) => {
+export const DotPoints02: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M21 5L10 5M21 19L10 19M21 12L10 12M6 5C6 5.82843 5.32843 6.5 4.5 6.5C3.67157 6.5 3 5.82843 3 5C3 4.17157 3.67157 3.5 4.5 3.5C5.32843 3.5 6 4.17157 6 5ZM6 19C6 19.8284 5.32843 20.5 4.5 20.5C3.67157 20.5 3 19.8284 3 19C3 18.1716 3.67157 17.5 4.5 17.5C5.32843 17.5 6 18.1716 6 19ZM6 12C6 12.8284 5.32843 13.5 4.5 13.5C3.67157 13.5 3 12.8284 3 12C3 11.1716 3.67157 10.5 4.5 10.5C5.32843 10.5 6 11.1716 6 12Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Drop: SVGComponentProps = ({ ...props }) => {
+export const Drop: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M20 14C20 18.4183 16.4183 22 12 22C7.58172 22 4 18.4183 4 14C4 12.9391 4.20651 11.9264 4.58152 11C5.76829 8.06817 12 2 12 2C12 2 18.2317 8.06817 19.4185 11C19.7935 11.9264 20 12.9391 20 14Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Dropper: SVGComponentProps = ({ ...props }) => {
+export const Dropper: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M10.5 6.49981L17.5 13.4998M2 21.9998C2 21.9998 6.5 21.4998 9 18.9998L21 6.99982C22.1046 5.89525 22.1046 4.10438 21 2.99982C19.8954 1.89525 18.1046 1.89524 17 2.99981L5 14.9998C2.5 17.4998 2 21.9998 2 21.9998Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Eraser: SVGComponentProps = ({ ...props }) => {
+export const Eraser: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M17.9995 13L10.9995 6.00004M20.9995 21H7.99955M10.9368 20.0628L19.6054 11.3941C20.7935 10.2061 21.3875 9.61207 21.6101 8.92709C21.8058 8.32456 21.8058 7.67551 21.6101 7.07298C21.3875 6.388 20.7935 5.79397 19.6054 4.60592L19.3937 4.39415C18.2056 3.2061 17.6116 2.61207 16.9266 2.38951C16.3241 2.19373 15.675 2.19373 15.0725 2.38951C14.3875 2.61207 13.7935 3.2061 12.6054 4.39415L4.39366 12.6059C3.20561 13.794 2.61158 14.388 2.38902 15.073C2.19324 15.6755 2.19324 16.3246 2.38902 16.9271C2.61158 17.6121 3.20561 18.2061 4.39366 19.3941L5.06229 20.0628C5.40819 20.4087 5.58114 20.5816 5.78298 20.7053C5.96192 20.815 6.15701 20.8958 6.36108 20.9448C6.59126 21 6.83585 21 7.32503 21H8.67406C9.16324 21 9.40784 21 9.63801 20.9448C9.84208 20.8958 10.0372 20.815 10.2161 20.7053C10.418 20.5816 10.5909 20.4087 10.9368 20.0628Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Feather: SVGComponentProps = ({ ...props }) => {
+export const Feather: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M16 8.00007L2 22.0001M18 15.0001H9M6.6 19.0001H13.3373C13.5818 19.0001 13.7041 19.0001 13.8192 18.9724C13.9213 18.9479 14.0188 18.9075 14.1083 18.8527C14.2092 18.7909 14.2957 18.7044 14.4686 18.5314L19.5 13.5001C19.739 13.2611 19.8584 13.1416 19.9546 13.0358C22.0348 10.7474 22.0348 7.25275 19.9546 4.9643C19.8584 4.85851 19.739 4.73903 19.5 4.50007C19.261 4.26111 19.1416 4.14163 19.0358 4.04547C16.7473 1.96531 13.2527 1.96531 10.9642 4.04547C10.8584 4.14163 10.739 4.26111 10.5 4.50007L5.46863 9.53144C5.29568 9.70439 5.2092 9.79087 5.14736 9.89179C5.09253 9.98126 5.05213 10.0788 5.02763 10.1808C5 10.2959 5 10.4182 5 10.6628V17.4001C5 17.9601 5 18.2401 5.10899 18.4541C5.20487 18.6422 5.35785 18.7952 5.54601 18.8911C5.75992 19.0001 6.03995 19.0001 6.6 19.0001Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Figma: SVGComponentProps = ({ ...props }) => {
+export const Figma: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M12 1.5H8.5C6.567 1.5 5 3.067 5 5C5 6.933 6.567 8.5 8.5 8.5M12 1.5V8.5M12 1.5H15.5C17.433 1.5 19 3.067 19 5C19 6.933 17.433 8.5 15.5 8.5M12 8.5H8.5M12 8.5V15.5M12 8.5H15.5M8.5 8.5C6.567 8.5 5 10.067 5 12C5 13.933 6.567 15.5 8.5 15.5M12 15.5H8.5M12 15.5V19C12 20.933 10.433 22.5 8.5 22.5C6.567 22.5 5 20.933 5 19C5 17.067 6.567 15.5 8.5 15.5M15.5 8.5C17.433 8.5 19 10.067 19 12C19 13.933 17.433 15.5 15.5 15.5C13.567 15.5 12 13.933 12 12C12 10.067 13.567 8.5 15.5 8.5Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Framer: SVGComponentProps = ({ ...props }) => {
+export const Framer: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M12 15.5V22.5L5 15.5M5 15.5V8.5H12M5 15.5H19L12 8.5M12 8.5H19V1.5H5L12 8.5Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Hand: SVGComponentProps = ({ ...props }) => {
+export const Hand: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M6.9 11.4444V14.2222M6.9 11.4444V4.77778C6.9 3.8573 7.66112 3.11111 8.6 3.11111C9.53888 3.11111 10.3 3.8573 10.3 4.77778M6.9 11.4444C6.9 10.524 6.13888 9.77778 5.2 9.77778C4.26112 9.77778 3.5 10.524 3.5 11.4444V13.6667C3.5 18.269 7.30558 22 12 22C16.6944 22 20.5 18.269 20.5 13.6667V8.11111C20.5 7.19064 19.7389 6.44444 18.8 6.44444C17.8611 6.44444 17.1 7.19064 17.1 8.11111M10.3 4.77778V10.8889M10.3 4.77778V3.66667C10.3 2.74619 11.0611 2 12 2C12.9389 2 13.7 2.74619 13.7 3.66667V4.77778M13.7 4.77778V10.8889M13.7 4.77778C13.7 3.8573 14.4611 3.11111 15.4 3.11111C16.3389 3.11111 17.1 3.8573 17.1 4.77778V8.11111M17.1 8.11111V10.8889"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Heading01: SVGComponentProps = ({ ...props }) => {
+export const Heading01: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M6 4V20M18 4V20M8 4H4M18 12L6 12M8 20H4M20 20H16M20 4H16"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Heading02: SVGComponentProps = ({ ...props }) => {
+export const Heading02: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M6 4V20M18 4V20M9.5 4V20M11.5 4H4M18 12H9.5M11.5 20H4M20 20H16M20 4H16"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const HeadingSquare: SVGComponentProps = ({ ...props }) => {
+export const HeadingSquare: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M8 7V17M16 7V17M16 12L8 12M7.8 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V7.8C21 6.11984 21 5.27976 20.673 4.63803C20.3854 4.07354 19.9265 3.6146 19.362 3.32698C18.7202 3 17.8802 3 16.2 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const ImageIndentLeft: SVGComponentProps = ({ ...props }) => {
+export const ImageIndentLeft: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M21 9.25H15M21 4H3M21 14.75H15M21 20H3M4.6 16H9.4C9.96005 16 10.2401 16 10.454 15.891C10.6422 15.7951 10.7951 15.6422 10.891 15.454C11 15.2401 11 14.9601 11 14.4V9.6C11 9.03995 11 8.75992 10.891 8.54601C10.7951 8.35785 10.6422 8.20487 10.454 8.10899C10.2401 8 9.96005 8 9.4 8H4.6C4.03995 8 3.75992 8 3.54601 8.10899C3.35785 8.20487 3.20487 8.35785 3.10899 8.54601C3 8.75992 3 9.03995 3 9.6V14.4C3 14.9601 3 15.2401 3.10899 15.454C3.20487 15.6422 3.35785 15.7951 3.54601 15.891C3.75992 16 4.03995 16 4.6 16Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const ImageIndentRight: SVGComponentProps = ({ ...props }) => {
+export const ImageIndentRight: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M21 4H3M21 20H3M9 9.25H3M9 14.75H3M14.6 16H19.4C19.9601 16 20.2401 16 20.454 15.891C20.6422 15.7951 20.7951 15.6422 20.891 15.454C21 15.2401 21 14.9601 21 14.4V9.6C21 9.03995 21 8.75992 20.891 8.54601C20.7951 8.35785 20.6422 8.20487 20.454 8.10899C20.2401 8 19.9601 8 19.4 8H14.6C14.0399 8 13.7599 8 13.546 8.10899C13.3578 8.20487 13.2049 8.35785 13.109 8.54601C13 8.75992 13 9.03995 13 9.6V14.4C13 14.9601 13 15.2401 13.109 15.454C13.2049 15.6422 13.3578 15.7951 13.546 15.891C13.7599 16 14.0399 16 14.6 16Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Italic01: SVGComponentProps = ({ ...props }) => {
+export const Italic01: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
-        d="M19 4H10M14 20H5M15 4L9 20"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
+      <Path d="M19 4H10M14 20H5M15 4L9 20" {...pathProps} />
     </SVG>
   );
 };
 
-export const Italic02: SVGComponentProps = ({ ...props }) => {
+export const Italic02: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M13.25 4L7.25 20M16.75 4L10.75 20M19.5 4L9.5 4M14.5 20H4.5"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const ItalicSquare: SVGComponentProps = ({ ...props }) => {
+export const ItalicSquare: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M14 7L10 17M7.8 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V7.8C21 6.11984 21 5.27976 20.673 4.63803C20.3854 4.07354 19.9265 3.6146 19.362 3.32698C18.7202 3 17.8802 3 16.2 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const LeftIndent01: SVGComponentProps = ({ ...props }) => {
+export const LeftIndent01: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M21 9.25H12M21 4H3M21 14.75H12M21 20H3M4.28 8.56L8.14667 11.46C8.43616 11.6771 8.5809 11.7857 8.63266 11.9188C8.678 12.0353 8.678 12.1647 8.63266 12.2812C8.5809 12.4143 8.43616 12.5229 8.14667 12.74L4.28 15.64C3.86802 15.949 3.66203 16.1035 3.48961 16.0999C3.33956 16.0968 3.19885 16.0264 3.10632 15.9082C3 15.7725 3 15.515 3 15V9.2C3 8.68503 3 8.42754 3.10632 8.29175C3.19885 8.17358 3.33956 8.10323 3.48961 8.10011C3.66203 8.09652 3.86802 8.25102 4.28 8.56Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const LeftIndent02: SVGComponentProps = ({ ...props }) => {
+export const LeftIndent02: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M21 9.24995H12M21 3.99995L12 3.99995M21 14.75H3M21 20H3M4.28 2.95995L8.14667 5.85995C8.43616 6.07707 8.5809 6.18563 8.63266 6.31872C8.678 6.43529 8.678 6.56462 8.63266 6.68119C8.5809 6.81427 8.43616 6.92283 8.14667 7.13995L4.28 10.04C3.86802 10.3489 3.66203 10.5034 3.48961 10.4998C3.33956 10.4967 3.19885 10.4264 3.10632 10.3082C3 10.1724 3 9.91493 3 9.39995V3.59995C3 3.08498 3 2.82749 3.10632 2.6917C3.19885 2.57354 3.33956 2.50318 3.48961 2.50006C3.66203 2.49648 3.86802 2.65097 4.28 2.95995Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const LetterSpacing01: SVGComponentProps = ({ ...props }) => {
+export const LetterSpacing01: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M9 13L15 13M7 17L11.2717 7.60225C11.5031 7.09323 11.6188 6.83872 11.7791 6.75976C11.9184 6.69115 12.0816 6.69115 12.2209 6.75976C12.3812 6.83872 12.4969 7.09323 12.7283 7.60225L17 17M21 3V21M3 3L3 21"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const LetterSpacing02: SVGComponentProps = ({ ...props }) => {
+export const LetterSpacing02: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M2 18H22M2 18L5 15M2 18L5 21M22 18L19 15M22 18L19 21M7 3H17M12 3V14"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const LineHeight: SVGComponentProps = ({ ...props }) => {
+export const LineHeight: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M9 13H15M7 17L11.2717 7.60224C11.5031 7.09323 11.6188 6.83872 11.7791 6.75976C11.9184 6.69115 12.0816 6.69115 12.2209 6.75976C12.3812 6.83872 12.4969 7.09323 12.7283 7.60224L17 17M21 21H3M21 3H3"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const MagicWand01: SVGComponentProps = ({ ...props }) => {
+export const MagicWand01: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M13.0001 14L10.0001 11M15.0104 3.5V2M18.9498 5.06066L20.0104 4M18.9498 13L20.0104 14.0607M11.0104 5.06066L9.94979 4M20.5104 9H22.0104M6.13146 20.8686L15.3687 11.6314C15.7647 11.2354 15.9627 11.0373 16.0369 10.809C16.1022 10.6082 16.1022 10.3918 16.0369 10.191C15.9627 9.96265 15.7647 9.76465 15.3687 9.36863L14.6315 8.63137C14.2354 8.23535 14.0374 8.03735 13.8091 7.96316C13.6083 7.8979 13.3919 7.8979 13.1911 7.96316C12.9627 8.03735 12.7647 8.23535 12.3687 8.63137L3.13146 17.8686C2.73545 18.2646 2.53744 18.4627 2.46325 18.691C2.39799 18.8918 2.39799 19.1082 2.46325 19.309C2.53744 19.5373 2.73545 19.7354 3.13146 20.1314L3.86872 20.8686C4.26474 21.2646 4.46275 21.4627 4.69108 21.5368C4.89192 21.6021 5.10827 21.6021 5.30911 21.5368C5.53744 21.4627 5.73545 21.2646 6.13146 20.8686Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const MagicWand02: SVGComponentProps = ({ ...props }) => {
+export const MagicWand02: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M15 4V2M15 16V14M8 9H10M20 9H22M17.8 11.8L19 13M17.8 6.2L19 5M3 21L12 12M12.2 6.2L11 5"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Move: SVGComponentProps = ({ ...props }) => {
+export const Move: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M5 9L2 12M2 12L5 15M2 12H22M9 5L12 2M12 2L15 5M12 2V22M15 19L12 22M12 22L9 19M19 9L22 12M22 12L19 15"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const PaintPour: SVGComponentProps = ({ ...props }) => {
+export const PaintPour: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M15.9997 11L1.9997 11M9.9997 4L7.9997 2M13.9997 22L1.9997 22M21.9997 16C21.9997 17.1046 21.1043 18 19.9997 18C18.8951 18 17.9997 17.1046 17.9997 16C17.9997 14.8954 19.9997 13 19.9997 13C19.9997 13 21.9997 14.8954 21.9997 16ZM8.9997 3L15.8683 9.86863C16.2643 10.2646 16.4624 10.4627 16.5365 10.691C16.6018 10.8918 16.6018 11.1082 16.5365 11.309C16.4624 11.5373 16.2643 11.7354 15.8683 12.1314L11.2624 16.7373C10.4704 17.5293 10.0744 17.9253 9.61773 18.0737C9.21605 18.2042 8.78335 18.2042 8.38166 18.0737C7.92501 17.9253 7.52899 17.5293 6.73696 16.7373L3.26244 13.2627C2.4704 12.4707 2.07439 12.0747 1.92601 11.618C1.7955 11.2163 1.7955 10.7837 1.92601 10.382C2.07439 9.92531 2.47041 9.52929 3.26244 8.73726L8.9997 3Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Paint: SVGComponentProps = ({ ...props }) => {
+export const Paint: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M2.99955 13H19.9995M11.9995 3.5L10.4995 2M11.4995 3L20.3682 11.8686C20.7642 12.2646 20.9622 12.4627 21.0364 12.691C21.1016 12.8918 21.1016 13.1082 21.0364 13.309C20.9622 13.5373 20.7642 13.7354 20.3682 14.1314L14.8937 19.6059C13.7056 20.7939 13.1116 21.388 12.4266 21.6105C11.8241 21.8063 11.175 21.8063 10.5725 21.6105C9.88751 21.388 9.29349 20.7939 8.10543 19.6059L4.89366 16.3941C3.70561 15.2061 3.11158 14.612 2.88902 13.9271C2.69324 13.3245 2.69324 12.6755 2.88902 12.0729C3.11158 11.388 3.70561 10.7939 4.89366 9.60589L11.4995 3Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Palette: SVGComponentProps = ({ ...props }) => {
+export const Palette: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M2 12C2 17.5228 6.47715 22 12 22C13.6569 22 15 20.6569 15 19V18.5C15 18.0356 15 17.8034 15.0257 17.6084C15.2029 16.2622 16.2622 15.2029 17.6084 15.0257C17.8034 15 18.0356 15 18.5 15H19C20.6569 15 22 13.6569 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
-      <path
+      <Path
         d="M7 13C7.55228 13 8 12.5523 8 12C8 11.4477 7.55228 11 7 11C6.44772 11 6 11.4477 6 12C6 12.5523 6.44772 13 7 13Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
-      <path
+      <Path
         d="M16 9C16.5523 9 17 8.55228 17 8C17 7.44772 16.5523 7 16 7C15.4477 7 15 7.44772 15 8C15 8.55228 15.4477 9 16 9Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
-      <path
+      <Path
         d="M10 8C10.5523 8 11 7.55228 11 7C11 6.44772 10.5523 6 10 6C9.44772 6 9 6.44772 9 7C9 7.55228 9.44772 8 10 8Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const ParagraphSpacing: SVGComponentProps = ({ ...props }) => {
+export const ParagraphSpacing: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M21 10H13M21 6H13M21 14H13M21 18H13M6 20L6 4M6 20L3 17M6 20L9 17M6 4L3 7M6 4L9 7"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const ParagraphWrap: SVGComponentProps = ({ ...props }) => {
+export const ParagraphWrap: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M3 6H21M3 12H18C18.7956 12 19.5587 12.3161 20.1213 12.8787C20.6839 13.4413 21 14.2044 21 15C21 15.7956 20.6839 16.5587 20.1213 17.1213C19.5587 17.6839 18.7956 18 18 18H14M14 18L16 16M14 18L16 20M3 18H10"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const PenTool01: SVGComponentProps = ({ ...props }) => {
+export const PenTool01: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M18 13L16.7004 6.50182C16.6278 6.13883 16.5915 5.95733 16.5032 5.80953C16.4252 5.67886 16.3183 5.56773 16.1908 5.4846C16.0466 5.39057 15.8667 5.34714 15.5069 5.26028L2 2M2 2L5.26028 15.5069C5.34714 15.8667 5.39057 16.0466 5.4846 16.1908C5.56773 16.3183 5.67886 16.4252 5.80953 16.5032C5.95733 16.5915 6.13883 16.6278 6.50182 16.7004L13 18M2 2L9.586 9.586M16.1314 20.8686L20.8686 16.1314C21.2646 15.7354 21.4627 15.5373 21.5368 15.309C21.6021 15.1082 21.6021 14.8918 21.5368 14.691C21.4627 14.4627 21.2646 14.2646 20.8686 13.8686L20.1314 13.1314C19.7354 12.7354 19.5373 12.5373 19.309 12.4632C19.1082 12.3979 18.8918 12.3979 18.691 12.4632C18.4627 12.5373 18.2646 12.7354 17.8686 13.1314L13.1314 17.8686C12.7354 18.2646 12.5373 18.4627 12.4632 18.691C12.3979 18.8918 12.3979 19.1082 12.4632 19.309C12.5373 19.5373 12.7354 19.7354 13.1314 20.1314L13.8686 20.8686C14.2646 21.2646 14.4627 21.4627 14.691 21.5368C14.8918 21.6021 15.1082 21.6021 15.309 21.5368C15.5373 21.4627 15.7354 21.2646 16.1314 20.8686ZM13 11C13 12.1046 12.1046 13 11 13C9.89543 13 9 12.1046 9 11C9 9.89543 9.89543 9 11 9C12.1046 9 13 9.89543 13 11Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const PenTool02: SVGComponentProps = ({ ...props }) => {
+export const PenTool02: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M13 5.99985L6.50182 7.29948C6.13883 7.37208 5.95733 7.40838 5.80952 7.49665C5.67886 7.57469 5.56772 7.68152 5.4846 7.80901C5.39057 7.95321 5.34714 8.13314 5.26028 8.49299L2 21.9998M2 21.9998L15.5069 18.7396C15.8667 18.6527 16.0466 18.6093 16.1908 18.5153C16.3183 18.4321 16.4252 18.321 16.5032 18.1903C16.5915 18.0425 16.6278 17.861 16.7004 17.498L18 10.9998M2 21.9998L9.586 14.4138M20.8686 7.86848L16.1314 3.13122C15.7354 2.7352 15.5373 2.53719 15.309 2.46301C15.1082 2.39775 14.8918 2.39775 14.691 2.46301C14.4627 2.53719 14.2646 2.7352 13.8686 3.13122L13.1314 3.86848C12.7354 4.2645 12.5373 4.4625 12.4632 4.69083C12.3979 4.89168 12.3979 5.10802 12.4632 5.30887C12.5373 5.53719 12.7354 5.7352 13.1314 6.13122L17.8686 10.8685C18.2646 11.2645 18.4627 11.4625 18.691 11.5367C18.8918 11.6019 19.1082 11.6019 19.309 11.5367C19.5373 11.4625 19.7354 11.2645 20.1314 10.8685L20.8686 10.1312C21.2646 9.7352 21.4627 9.53719 21.5368 9.30887C21.6021 9.10802 21.6021 8.89168 21.5368 8.69083C21.4627 8.4625 21.2646 8.2645 20.8686 7.86848ZM11 10.9998C12.1046 10.9998 13 11.8953 13 12.9998C13 14.1044 12.1046 14.9998 11 14.9998C9.89543 14.9998 9 14.1044 9 12.9998C9 11.8953 9.89543 10.9998 11 10.9998Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const PenToolMinus: SVGComponentProps = ({ ...props }) => {
+export const PenToolMinus: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
-        d="M18 10H6M21 6H3M21 14H3M18 18H6"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
+      <Path d="M18 10H6M21 6H3M21 14H3M18 18H6" {...pathProps} />
     </SVG>
   );
 };
 
-export const PenToolPlus: SVGComponentProps = ({ ...props }) => {
+export const PenToolPlus: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M15 7L8.83447 8.76158C8.52956 8.8487 8.37711 8.89226 8.25117 8.97414C8.13969 9.04662 8.04379 9.1406 7.96907 9.2506C7.88466 9.37485 7.83803 9.5264 7.74477 9.82948L4 22M4 22L16.1705 18.2552C16.4736 18.162 16.6251 18.1153 16.7494 18.0309C16.8594 17.9562 16.9534 17.8603 17.0259 17.7488C17.1077 17.6229 17.1513 17.4704 17.2384 17.1655L19 11M4 22L10.586 15.4139M5 8V2M2 5H8M21.8686 7.86863L18.1314 4.13137C17.7354 3.73535 17.5373 3.53735 17.309 3.46316C17.1082 3.3979 16.8918 3.3979 16.691 3.46316C16.4627 3.53735 16.2646 3.73535 15.8686 4.13137L15.1314 4.86863C14.7354 5.26465 14.5373 5.46265 14.4632 5.69098C14.3979 5.89183 14.3979 6.10817 14.4632 6.30902C14.5373 6.53735 14.7354 6.73535 15.1314 7.13137L18.8686 10.8686C19.2646 11.2646 19.4627 11.4627 19.691 11.5368C19.8918 11.6021 20.1082 11.6021 20.309 11.5368C20.5373 11.4627 20.7354 11.2646 21.1314 10.8686L21.8686 10.1314C22.2646 9.73535 22.4627 9.53735 22.5368 9.30902C22.6021 9.10817 22.6021 8.89183 22.5368 8.69098C22.4627 8.46265 22.2646 8.26465 21.8686 7.86863ZM12 12C13.1046 12 14 12.8954 14 14C14 15.1046 13.1046 16 12 16C10.8954 16 10 15.1046 10 14C10 12.8954 10.8954 12 12 12Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Pencil01: SVGComponentProps = ({ ...props }) => {
+export const Pencil01: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M2.5 21.4998L8.04927 19.3655C8.40421 19.229 8.58168 19.1607 8.74772 19.0716C8.8952 18.9924 9.0358 18.901 9.16804 18.7984C9.31692 18.6829 9.45137 18.5484 9.72028 18.2795L21 6.99982C22.1046 5.89525 22.1046 4.10438 21 2.99981C19.8955 1.89525 18.1046 1.89524 17 2.99981L5.72028 14.2795C5.45138 14.5484 5.31692 14.6829 5.20139 14.8318C5.09877 14.964 5.0074 15.1046 4.92823 15.2521C4.83911 15.4181 4.77085 15.5956 4.63433 15.9506L2.5 21.4998ZM2.5 21.4998L4.55812 16.1488C4.7054 15.7659 4.77903 15.5744 4.90534 15.4867C5.01572 15.4101 5.1523 15.3811 5.2843 15.4063C5.43533 15.4351 5.58038 15.5802 5.87048 15.8703L8.12957 18.1294C8.41967 18.4195 8.56472 18.5645 8.59356 18.7155C8.61877 18.8475 8.58979 18.9841 8.51314 19.0945C8.42545 19.2208 8.23399 19.2944 7.85107 19.4417L2.5 21.4998Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Pencil02: SVGComponentProps = ({ ...props }) => {
+export const Pencil02: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M18 2L22 6M2 22L3.2764 17.3199C3.35968 17.0145 3.40131 16.8619 3.46523 16.7195C3.52199 16.5931 3.59172 16.4729 3.67332 16.3609C3.76521 16.2348 3.87711 16.1229 4.1009 15.8991L14.4343 5.56569C14.6323 5.36768 14.7313 5.26867 14.8455 5.23158C14.9459 5.19895 15.0541 5.19895 15.1545 5.23158C15.2687 5.26867 15.3677 5.36768 15.5657 5.56569L18.4343 8.43431C18.6323 8.63232 18.7313 8.73133 18.7684 8.84549C18.8011 8.94591 18.8011 9.05409 18.7684 9.15451C18.7313 9.26867 18.6323 9.36768 18.4343 9.56569L8.1009 19.8991C7.87711 20.1229 7.76521 20.2348 7.63908 20.3267C7.52709 20.4083 7.40692 20.478 7.28052 20.5348C7.13815 20.5987 6.98548 20.6403 6.68014 20.7236L2 22Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const PencilLine: SVGComponentProps = ({ ...props }) => {
+export const PencilLine: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M21 20.9998H13M2.5 21.4998L8.04927 19.3655C8.40421 19.229 8.58168 19.1607 8.74772 19.0716C8.8952 18.9924 9.0358 18.901 9.16804 18.7984C9.31692 18.6829 9.45137 18.5484 9.72028 18.2795L21 6.99982C22.1046 5.89525 22.1046 4.10438 21 2.99981C19.8955 1.89525 18.1046 1.89524 17 2.99981L5.72028 14.2795C5.45138 14.5484 5.31692 14.6829 5.20139 14.8318C5.09877 14.964 5.0074 15.1046 4.92823 15.2521C4.83911 15.4181 4.77085 15.5956 4.63433 15.9506L2.5 21.4998ZM2.5 21.4998L4.55812 16.1488C4.7054 15.7659 4.77903 15.5744 4.90534 15.4867C5.01572 15.4101 5.1523 15.3811 5.2843 15.4063C5.43533 15.4351 5.58038 15.5802 5.87048 15.8703L8.12957 18.1294C8.41967 18.4195 8.56472 18.5645 8.59356 18.7155C8.61877 18.8475 8.58979 18.9841 8.51314 19.0945C8.42545 19.2208 8.23399 19.2944 7.85107 19.4417L2.5 21.4998Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Perspective01: SVGComponentProps = ({ ...props }) => {
+export const Perspective01: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M19 9V15M5 7V17M17 6.71429L7 5.28571M17 17.2857L7 18.7143M4.6 7H5.4C5.96005 7 6.24008 7 6.45399 6.89101C6.64215 6.79513 6.79513 6.64215 6.89101 6.45399C7 6.24008 7 5.96005 7 5.4V4.6C7 4.03995 7 3.75992 6.89101 3.54601C6.79513 3.35785 6.64215 3.20487 6.45399 3.10899C6.24008 3 5.96005 3 5.4 3H4.6C4.03995 3 3.75992 3 3.54601 3.10899C3.35785 3.20487 3.20487 3.35785 3.10899 3.54601C3 3.75992 3 4.03995 3 4.6V5.4C3 5.96005 3 6.24008 3.10899 6.45399C3.20487 6.64215 3.35785 6.79513 3.54601 6.89101C3.75992 7 4.03995 7 4.6 7ZM4.6 21H5.4C5.96005 21 6.24008 21 6.45399 20.891C6.64215 20.7951 6.79513 20.6422 6.89101 20.454C7 20.2401 7 19.9601 7 19.4V18.6C7 18.0399 7 17.7599 6.89101 17.546C6.79513 17.3578 6.64215 17.2049 6.45399 17.109C6.24008 17 5.96005 17 5.4 17H4.6C4.03995 17 3.75992 17 3.54601 17.109C3.35785 17.2049 3.20487 17.3578 3.10899 17.546C3 17.7599 3 18.0399 3 18.6V19.4C3 19.9601 3 20.2401 3.10899 20.454C3.20487 20.6422 3.35785 20.7951 3.54601 20.891C3.75992 21 4.03995 21 4.6 21ZM18.6 9H19.4C19.9601 9 20.2401 9 20.454 8.89101C20.6422 8.79513 20.7951 8.64215 20.891 8.45399C21 8.24008 21 7.96005 21 7.4V6.6C21 6.03995 21 5.75992 20.891 5.54601C20.7951 5.35785 20.6422 5.20487 20.454 5.10899C20.2401 5 19.9601 5 19.4 5H18.6C18.0399 5 17.7599 5 17.546 5.10899C17.3578 5.20487 17.2049 5.35785 17.109 5.54601C17 5.75992 17 6.03995 17 6.6V7.4C17 7.96005 17 8.24008 17.109 8.45399C17.2049 8.64215 17.3578 8.79513 17.546 8.89101C17.7599 9 18.0399 9 18.6 9ZM18.6 19H19.4C19.9601 19 20.2401 19 20.454 18.891C20.6422 18.7951 20.7951 18.6422 20.891 18.454C21 18.2401 21 17.9601 21 17.4V16.6C21 16.0399 21 15.7599 20.891 15.546C20.7951 15.3578 20.6422 15.2049 20.454 15.109C20.2401 15 19.9601 15 19.4 15H18.6C18.0399 15 17.7599 15 17.546 15.109C17.3578 15.2049 17.2049 15.3578 17.109 15.546C17 15.7599 17 16.0399 17 16.6V17.4C17 17.9601 17 18.2401 17.109 18.454C17.2049 18.6422 17.3578 18.7951 17.546 18.891C17.7599 19 18.0399 19 18.6 19Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Perspective02: SVGComponentProps = ({ ...props }) => {
+export const Perspective02: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M16 5.00007L16 19.0001M10 4.00007L10 20.0001M3 12.0001H21M3 5.98924L3 18.0109C3 19.3749 3 20.0569 3.28134 20.5297C3.52803 20.9442 3.9162 21.2556 4.37434 21.4065C4.89685 21.5785 5.56262 21.4306 6.89418 21.1347L18.4942 18.5569C19.3883 18.3582 19.8354 18.2589 20.1691 18.0185C20.4634 17.8064 20.6945 17.5183 20.8377 17.1849C21 16.807 21 16.3491 21 15.4331V8.56702C21 7.65109 21 7.19312 20.8377 6.8152C20.6945 6.48186 20.4634 6.19373 20.1691 5.98168C19.8354 5.74126 19.3883 5.64191 18.4942 5.44322L6.89418 2.86544C5.56262 2.56954 4.89685 2.42159 4.37434 2.59368C3.9162 2.74457 3.52803 3.05596 3.28134 3.47045C3 3.94318 3 4.6252 3 5.98924Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Pilcrow01: SVGComponentProps = ({ ...props }) => {
+export const Pilcrow01: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M16 4V20M16 4H18M16 4H10.5C8.01472 4 6 6.01472 6 8.5C6 10.9853 8.01472 13 10.5 13H16V4ZM14 20H18"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Pilcrow02: SVGComponentProps = ({ ...props }) => {
+export const Pilcrow02: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M17.5 4V20M19.5 4H9C6.79086 4 5 5.79086 5 8C5 10.2091 6.79086 12 9 12H14M14 4V20M12 20H19.5"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const PilcrowSquare: SVGComponentProps = ({ ...props }) => {
+export const PilcrowSquare: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M15 17V7H11C9.34315 7 8 8.34315 8 10C8 11.6569 9.34315 13 11 13H15M7.8 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V7.8C21 6.11984 21 5.27976 20.673 4.63803C20.3854 4.07354 19.9265 3.6146 19.362 3.32698C18.7202 3 17.8802 3 16.2 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Reflect01: SVGComponentProps = ({ ...props }) => {
+export const Reflect01: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M12 3V6M12 10.5V13.5M12 18V21M3.28777 7.99059L7.67567 11.3659C7.95617 11.5817 8.09641 11.6895 8.14681 11.821C8.19098 11.9363 8.19098 12.0637 8.14681 12.179C8.09641 12.3105 7.95617 12.4183 7.67567 12.6341L3.28777 16.0094C2.87415 16.3276 2.66735 16.4867 2.49387 16.4845C2.34295 16.4827 2.20094 16.4128 2.10745 16.2943C2 16.1581 2 15.8971 2 15.3753V8.62469C2 8.10286 2 7.84195 2.10745 7.70574C2.20094 7.58724 2.34295 7.51732 2.49387 7.51547C2.66735 7.51334 2.87415 7.67243 3.28777 7.99059ZM20.7122 7.99059L16.3243 11.3659C16.0438 11.5817 15.9036 11.6895 15.8532 11.821C15.809 11.9363 15.809 12.0637 15.8532 12.179C15.9036 12.3105 16.0438 12.4183 16.3243 12.6341L20.7122 16.0094C21.1258 16.3276 21.3327 16.4867 21.5061 16.4845C21.6571 16.4827 21.7991 16.4128 21.8925 16.2943C22 16.1581 22 15.8971 22 15.3753V8.62469C22 8.10286 22 7.84195 21.8925 7.70574C21.7991 7.58724 21.6571 7.51732 21.5061 7.51547C21.3327 7.51334 21.1258 7.67243 20.7122 7.99059Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Reflect02: SVGComponentProps = ({ ...props }) => {
+export const Reflect02: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M12 3V6M12 10.5V13.5M12 18V21M22 12H15.5M15.5 12L19.5 16M15.5 12L19.5 8M2 12H8.5M8.5 12L4.5 16M8.5 12L4.5 8"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const RightIndent01: SVGComponentProps = ({ ...props }) => {
+export const RightIndent01: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M21 4H3M21 20H3M12 9.25H3M12 14.75H3M19.72 8.46L15.8533 11.36C15.5638 11.5771 15.4191 11.6857 15.3673 11.8188C15.322 11.9353 15.322 12.0647 15.3673 12.1812C15.4191 12.3143 15.5638 12.4229 15.8533 12.64L19.72 15.54C20.132 15.849 20.338 16.0035 20.5104 15.9999C20.6604 15.9968 20.8012 15.9264 20.8937 15.8082C21 15.6725 21 15.415 21 14.9V9.1C21 8.58503 21 8.32754 20.8937 8.19175C20.8012 8.07358 20.6604 8.00323 20.5104 8.00011C20.338 7.99652 20.132 8.15102 19.72 8.46Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const RightIndent02: SVGComponentProps = ({ ...props }) => {
+export const RightIndent02: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M12 9.24995H3M12 3.99995L3 3.99995M21 14.75H3M21 20H3M19.72 2.95995L15.8533 5.85995C15.5638 6.07707 15.4191 6.18563 15.3673 6.31872C15.322 6.43529 15.322 6.56462 15.3673 6.68119C15.4191 6.81427 15.5638 6.92283 15.8533 7.13995L19.72 10.04C20.132 10.3489 20.338 10.5034 20.5104 10.4998C20.6604 10.4967 20.8012 10.4264 20.8937 10.3082C21 10.1724 21 9.91493 21 9.39995V3.59995C21 3.08498 21 2.82749 20.8937 2.6917C20.8012 2.57354 20.6604 2.50318 20.5104 2.50006C20.338 2.49648 20.132 2.65097 19.72 2.95995Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const RollerBrush: SVGComponentProps = ({ ...props }) => {
+export const RollerBrush: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M19 4.5C19 4.96466 19 5.19698 18.9616 5.39018C18.8038 6.18356 18.1836 6.80376 17.3902 6.96157C17.197 7 16.9647 7 16.5 7H5.5C5.03534 7 4.80302 7 4.60982 6.96157C3.81644 6.80376 3.19624 6.18356 3.03843 5.39018C3 5.19698 3 4.96466 3 4.5C3 4.03534 3 3.80302 3.03843 3.60982C3.19624 2.81644 3.81644 2.19624 4.60982 2.03843C4.80302 2 5.03534 2 5.5 2H16.5C16.9647 2 17.197 2 17.3902 2.03843C18.1836 2.19624 18.8038 2.81644 18.9616 3.60982C19 3.80302 19 4.03534 19 4.5ZM19 4.5C19.9319 4.5 20.3978 4.5 20.7654 4.65224C21.2554 4.85523 21.6448 5.24458 21.8478 5.73463C22 6.10218 22 6.56812 22 7.5V7.8C22 8.9201 22 9.48016 21.782 9.90798C21.5903 10.2843 21.2843 10.5903 20.908 10.782C20.4802 11 19.9201 11 18.8 11H15.2C14.0799 11 13.5198 11 13.092 11.218C12.7157 11.4097 12.4097 11.7157 12.218 12.092C12 12.5198 12 13.0799 12 14.2V15M11.6 22H12.4C12.9601 22 13.2401 22 13.454 21.891C13.6422 21.7951 13.7951 21.6422 13.891 21.454C14 21.2401 14 20.9601 14 20.4V16.6C14 16.0399 14 15.7599 13.891 15.546C13.7951 15.3578 13.6422 15.2049 13.454 15.109C13.2401 15 12.9601 15 12.4 15H11.6C11.0399 15 10.7599 15 10.546 15.109C10.3578 15.2049 10.2049 15.3578 10.109 15.546C10 15.7599 10 16.0399 10 16.6V20.4C10 20.9601 10 21.2401 10.109 21.454C10.2049 21.6422 10.3578 21.7951 10.546 21.891C10.7599 22 11.0399 22 11.6 22Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Scale01: SVGComponentProps = ({ ...props }) => {
+export const Scale01: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M14 22H6.8M6.8 22C5.11984 22 4.27976 22 3.63803 21.673C3.07354 21.3854 2.6146 20.9265 2.32698 20.362C2 19.7202 2 18.8802 2 17.2M6.8 22H7.2C8.88016 22 9.72024 22 10.362 21.673C10.9265 21.3854 11.3854 20.9265 11.673 20.362C12 19.7202 12 18.8802 12 17.2V16.8C12 15.1198 12 14.2798 11.673 13.638C11.3854 13.0735 10.9265 12.6146 10.362 12.327C9.72024 12 8.88016 12 7.2 12H6.8C5.11984 12 4.27976 12 3.63803 12.327C3.07354 12.6146 2.6146 13.0735 2.32698 13.638C2 14.2798 2 15.1198 2 16.8V17.2M2 17.2V10M10 2H14M22 10V14M18 22C18.93 22 19.395 22 19.7765 21.8978C20.8117 21.6204 21.6204 20.8117 21.8978 19.7765C22 19.395 22 18.93 22 18M22 6C22 5.07003 22 4.60504 21.8978 4.22354C21.6204 3.18827 20.8117 2.37962 19.7765 2.10222C19.395 2 18.93 2 18 2M6 2C5.07003 2 4.60504 2 4.22354 2.10222C3.18827 2.37962 2.37962 3.18827 2.10222 4.22354C2 4.60504 2 5.07003 2 6"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Scale02: SVGComponentProps = ({ ...props }) => {
+export const Scale02: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M16 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V7.8C21 6.11984 21 5.27976 20.673 4.63803C20.3854 4.07354 19.9265 3.6146 19.362 3.32698C18.7202 3 17.8802 3 16.2 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V8M11.5 12.5L17 7M17 7H12M17 7V12M6.2 21H8.8C9.9201 21 10.4802 21 10.908 20.782C11.2843 20.5903 11.5903 20.2843 11.782 19.908C12 19.4802 12 18.9201 12 17.8V15.2C12 14.0799 12 13.5198 11.782 13.092C11.5903 12.7157 11.2843 12.4097 10.908 12.218C10.4802 12 9.92011 12 8.8 12H6.2C5.0799 12 4.51984 12 4.09202 12.218C3.71569 12.4097 3.40973 12.7157 3.21799 13.092C3 13.5198 3 14.0799 3 15.2V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Scale03: SVGComponentProps = ({ ...props }) => {
+export const Scale03: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M16.2 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V7.8M16.2 3C17.8802 3 18.7202 3 19.362 3.32698C19.9265 3.6146 20.3854 4.07354 20.673 4.63803C21 5.27976 21 6.11984 21 7.8M16.2 3H15.2C14.0799 3 13.5198 3 13.092 3.21799C12.7157 3.40973 12.4097 3.71569 12.218 4.09202C12 4.51984 12 5.07989 12 6.2V8.8C12 9.9201 12 10.4802 12.218 10.908C12.4097 11.2843 12.7157 11.5903 13.092 11.782C13.5198 12 14.0799 12 15.2 12H17.8C18.9201 12 19.4802 12 19.908 11.782C20.2843 11.5903 20.5903 11.2843 20.782 10.908C21 10.4802 21 9.92011 21 8.8V7.8M12.5 11.5L7 17M7 17H12M7 17L7 12"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Scissors01: SVGComponentProps = ({ ...props }) => {
+export const Scissors01: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M20 4L8.5 15.5M8.5 8.5L20 20M6 3C7.65685 3 9 4.34315 9 6C9 7.65685 7.65685 9 6 9C4.34315 9 3 7.65685 3 6C3 4.34315 4.34315 3 6 3ZM6 15C7.65685 15 9 16.3431 9 18C9 19.6569 7.65685 21 6 21C4.34315 21 3 19.6569 3 18C3 16.3431 4.34315 15 6 15Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Scissors02: SVGComponentProps = ({ ...props }) => {
+export const Scissors02: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M4.5 8.6L21 17M21 7L4.5 15.4M6 3C7.65685 3 9 4.34315 9 6C9 7.65685 7.65685 9 6 9C4.34315 9 3 7.65685 3 6C3 4.34315 4.34315 3 6 3ZM6 15C7.65685 15 9 16.3431 9 18C9 19.6569 7.65685 21 6 21C4.34315 21 3 19.6569 3 18C3 16.3431 4.34315 15 6 15Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const ScissorsCut01: SVGComponentProps = ({ ...props }) => {
+export const ScissorsCut01: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M20 4L8.5 15.5M8.5 8.5L20 20M17.5 12H17.51M22 12H22.01M6 3C7.65685 3 9 4.34315 9 6C9 7.65685 7.65685 9 6 9C4.34315 9 3 7.65685 3 6C3 4.34315 4.34315 3 6 3ZM6 15C7.65685 15 9 16.3431 9 18C9 19.6569 7.65685 21 6 21C4.34315 21 3 19.6569 3 18C3 16.3431 4.34315 15 6 15Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const ScissorsCut02: SVGComponentProps = ({ ...props }) => {
+export const ScissorsCut02: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M4.5 8.6L21 17M21 7L4.5 15.4M17.5 12H17.51M22 12H22.01M6 3C7.65685 3 9 4.34315 9 6C9 7.65685 7.65685 9 6 9C4.34315 9 3 7.65685 3 6C3 4.34315 4.34315 3 6 3ZM6 15C7.65685 15 9 16.3431 9 18C9 19.6569 7.65685 21 6 21C4.34315 21 3 19.6569 3 18C3 16.3431 4.34315 15 6 15Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Skew: SVGComponentProps = ({ ...props }) => {
+export const Skew: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M19.7141 6.9999L18.2856 16.9999M6.14286 7L4.35714 17M18 5L8 5M16 19L6 19M5.6 7H6.4C6.96005 7 7.24008 7 7.45399 6.89101C7.64215 6.79513 7.79513 6.64215 7.89101 6.45399C8 6.24008 8 5.96005 8 5.4V4.6C8 4.03995 8 3.75992 7.89101 3.54601C7.79513 3.35785 7.64215 3.20487 7.45399 3.10899C7.24008 3 6.96005 3 6.4 3H5.6C5.03995 3 4.75992 3 4.54601 3.10899C4.35785 3.20487 4.20487 3.35785 4.10899 3.54601C4 3.75992 4 4.03995 4 4.6V5.4C4 5.96005 4 6.24008 4.10899 6.45399C4.20487 6.64215 4.35785 6.79513 4.54601 6.89101C4.75992 7 5.03995 7 5.6 7ZM3.6 21H4.4C4.96005 21 5.24008 21 5.45399 20.891C5.64215 20.7951 5.79513 20.6422 5.89101 20.454C6 20.2401 6 19.9601 6 19.4V18.6C6 18.0399 6 17.7599 5.89101 17.546C5.79513 17.3578 5.64215 17.2049 5.45399 17.109C5.24008 17 4.96005 17 4.4 17H3.6C3.03995 17 2.75992 17 2.54601 17.109C2.35785 17.2049 2.20487 17.3578 2.10899 17.546C2 17.7599 2 18.0399 2 18.6V19.4C2 19.9601 2 20.2401 2.10899 20.454C2.20487 20.6422 2.35785 20.7951 2.54601 20.891C2.75992 21 3.03995 21 3.6 21ZM19.6 7H20.4C20.9601 7 21.2401 7 21.454 6.89101C21.6422 6.79513 21.7951 6.64215 21.891 6.45399C22 6.24008 22 5.96005 22 5.4V4.6C22 4.03995 22 3.75992 21.891 3.54601C21.7951 3.35785 21.6422 3.20487 21.454 3.10899C21.2401 3 20.9601 3 20.4 3H19.6C19.0399 3 18.7599 3 18.546 3.10899C18.3578 3.20487 18.2049 3.35785 18.109 3.54601C18 3.75992 18 4.03995 18 4.6V5.4C18 5.96005 18 6.24008 18.109 6.45399C18.2049 6.64215 18.3578 6.79513 18.546 6.89101C18.7599 7 19.0399 7 19.6 7ZM17.6 21H18.4C18.9601 21 19.2401 21 19.454 20.891C19.6422 20.7951 19.7951 20.6422 19.891 20.454C20 20.2401 20 19.9601 20 19.4V18.6C20 18.0399 20 17.7599 19.891 17.546C19.7951 17.3578 19.6422 17.2049 19.454 17.109C19.2401 17 18.9601 17 18.4 17H17.6C17.0399 17 16.7599 17 16.546 17.109C16.3578 17.2049 16.2049 17.3578 16.109 17.546C16 17.7599 16 18.0399 16 18.6V19.4C16 19.9601 16 20.2401 16.109 20.454C16.2049 20.6422 16.3578 20.7951 16.546 20.891C16.7599 21 17.0399 21 17.6 21Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const StrikeThrough01: SVGComponentProps = ({ ...props }) => {
+export const StrikeThrough01: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M6 16C6 18.2091 7.79086 20 10 20H14C16.2091 20 18 18.2091 18 16C18 13.7909 16.2091 12 14 12M18 8C18 5.79086 16.2091 4 14 4H10C7.79086 4 6 5.79086 6 8M3 12H21"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const StrikeThrough02: SVGComponentProps = ({ ...props }) => {
+export const StrikeThrough02: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M6 16C6 18.2091 7.79086 20 10 20H14C16.2091 20 18 18.2091 18 16C18 13.7909 16.2091 12 14 12M10.5 20C12.7091 20 14.5 18.2091 14.5 16C14.5 13.7909 12.7091 12 10.5 12M18 8C18 5.79086 16.2091 4 14 4H10C7.79086 4 6 5.79086 6 8M13.5 4C11.2909 4 9.5 5.79086 9.5 8M3 12H21"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const StrikeThroughSquare: SVGComponentProps = ({ ...props }) => {
+export const StrikeThroughSquare: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M6 12H18M11 12H13C14.3807 12 15.5 13.1193 15.5 14.5C15.5 15.8807 14.3807 17 13 17H10.8333C9.83827 17 8.98868 16.3771 8.65321 15.5M15.3468 8.5C15.0113 7.62288 14.1617 7 13.1667 7H11C9.97484 7 9.0938 7.61705 8.70802 8.5M7.8 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V7.8C21 6.11984 21 5.27976 20.673 4.63803C20.3854 4.07354 19.9265 3.6146 19.362 3.32698C18.7202 3 17.8802 3 16.2 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Subscript: SVGComponentProps = ({ ...props }) => {
+export const Subscript: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M3 5L13 15M13 5L3 15M21 19.0001H17C17 17.5001 17.44 17.0001 18.5 16.5001C19.56 16.0001 21 15.3301 21 14.0001C21 13.5301 20.83 13.0701 20.52 12.7101C20.1999 12.3476 19.7649 12.1061 19.2879 12.026C18.811 11.9459 18.321 12.0321 17.9 12.2701C17.48 12.5101 17.16 12.8901 17 13.3401"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const TextInput: SVGComponentProps = ({ ...props }) => {
+export const TextInput: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M13 7H5.2C4.0799 7 3.51984 7 3.09202 7.21799C2.71569 7.40973 2.40973 7.71569 2.21799 8.09202C2 8.51984 2 9.0799 2 10.2V13.8C2 14.9201 2 15.4802 2.21799 15.908C2.40973 16.2843 2.71569 16.5903 3.09202 16.782C3.51984 17 4.07989 17 5.2 17H13M17 7H18.8C19.9201 7 20.4802 7 20.908 7.21799C21.2843 7.40973 21.5903 7.71569 21.782 8.09202C22 8.51984 22 9.0799 22 10.2V13.8C22 14.9201 22 15.4802 21.782 15.908C21.5903 16.2843 21.2843 16.5903 20.908 16.782C20.4802 17 19.9201 17 18.8 17H17M17 21L17 3M19.5 3.00001L14.5 3M19.5 21L14.5 21"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Transform: SVGComponentProps = ({ ...props }) => {
+export const Transform: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M19 7V17M5 7V17M17 5L7 5M17 19H7M4.6 7H5.4C5.96005 7 6.24008 7 6.45399 6.89101C6.64215 6.79513 6.79513 6.64215 6.89101 6.45399C7 6.24008 7 5.96005 7 5.4V4.6C7 4.03995 7 3.75992 6.89101 3.54601C6.79513 3.35785 6.64215 3.20487 6.45399 3.10899C6.24008 3 5.96005 3 5.4 3H4.6C4.03995 3 3.75992 3 3.54601 3.10899C3.35785 3.20487 3.20487 3.35785 3.10899 3.54601C3 3.75992 3 4.03995 3 4.6V5.4C3 5.96005 3 6.24008 3.10899 6.45399C3.20487 6.64215 3.35785 6.79513 3.54601 6.89101C3.75992 7 4.03995 7 4.6 7ZM4.6 21H5.4C5.96005 21 6.24008 21 6.45399 20.891C6.64215 20.7951 6.79513 20.6422 6.89101 20.454C7 20.2401 7 19.9601 7 19.4V18.6C7 18.0399 7 17.7599 6.89101 17.546C6.79513 17.3578 6.64215 17.2049 6.45399 17.109C6.24008 17 5.96005 17 5.4 17H4.6C4.03995 17 3.75992 17 3.54601 17.109C3.35785 17.2049 3.20487 17.3578 3.10899 17.546C3 17.7599 3 18.0399 3 18.6V19.4C3 19.9601 3 20.2401 3.10899 20.454C3.20487 20.6422 3.35785 20.7951 3.54601 20.891C3.75992 21 4.03995 21 4.6 21ZM18.6 7H19.4C19.9601 7 20.2401 7 20.454 6.89101C20.6422 6.79513 20.7951 6.64215 20.891 6.45399C21 6.24008 21 5.96005 21 5.4V4.6C21 4.03995 21 3.75992 20.891 3.54601C20.7951 3.35785 20.6422 3.20487 20.454 3.10899C20.2401 3 19.9601 3 19.4 3H18.6C18.0399 3 17.7599 3 17.546 3.10899C17.3578 3.20487 17.2049 3.35785 17.109 3.54601C17 3.75992 17 4.03995 17 4.6V5.4C17 5.96005 17 6.24008 17.109 6.45399C17.2049 6.64215 17.3578 6.79513 17.546 6.89101C17.7599 7 18.0399 7 18.6 7ZM18.6 21H19.4C19.9601 21 20.2401 21 20.454 20.891C20.6422 20.7951 20.7951 20.6422 20.891 20.454C21 20.2401 21 19.9601 21 19.4V18.6C21 18.0399 21 17.7599 20.891 17.546C20.7951 17.3578 20.6422 17.2049 20.454 17.109C20.2401 17 19.9601 17 19.4 17H18.6C18.0399 17 17.7599 17 17.546 17.109C17.3578 17.2049 17.2049 17.3578 17.109 17.546C17 17.7599 17 18.0399 17 18.6V19.4C17 19.9601 17 20.2401 17.109 20.454C17.2049 20.6422 17.3578 20.7951 17.546 20.891C17.7599 21 18.0399 21 18.6 21Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Type01: SVGComponentProps = ({ ...props }) => {
+export const Type01: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M4 7C4 6.06812 4 5.60218 4.15224 5.23463C4.35523 4.74458 4.74458 4.35523 5.23463 4.15224C5.60218 4 6.06812 4 7 4H17C17.9319 4 18.3978 4 18.7654 4.15224C19.2554 4.35523 19.6448 4.74458 19.8478 5.23463C20 5.60218 20 6.06812 20 7M9 20H15M12 4V20"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Type02: SVGComponentProps = ({ ...props }) => {
+export const Type02: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M4 7C4 6.06812 4 5.60218 4.15224 5.23463C4.35523 4.74458 4.74458 4.35523 5.23463 4.15224C5.60218 4 6.06812 4 7 4H17C17.9319 4 18.3978 4 18.7654 4.15224C19.2554 4.35523 19.6448 4.74458 19.8478 5.23463C20 5.60218 20 6.06812 20 7M8 20H16M10.25 4V20M13.75 4V20"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const TypeSquare: SVGComponentProps = ({ ...props }) => {
+export const TypeSquare: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M8 7H16M12 7V17M7.8 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V7.8C21 6.11984 21 5.27976 20.673 4.63803C20.3854 4.07354 19.9265 3.6146 19.362 3.32698C18.7202 3 17.8802 3 16.2 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const TypeStrikeThrough01: SVGComponentProps = ({ ...props }) => {
+export const TypeStrikeThrough01: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M4 7V6C4 5.45879 4.21497 4.96778 4.56419 4.60772M9 20H15M12 12V20M3 3L21 21M9.5 4H17C17.9319 4 18.3978 4 18.7654 4.15224C19.2554 4.35523 19.6448 4.74458 19.8478 5.23463C20 5.60218 20 6.06812 20 7M12 4V6.5"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const TypeStrikeThrough02: SVGComponentProps = ({ ...props }) => {
+export const TypeStrikeThrough02: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M8 20H16M10.25 10.5V20M13.75 14V20M3 3L21 21M4 6.99995V5.99995C4 5.45873 4.21497 4.96773 4.56419 4.60767M9.5 4H17C17.9319 4 18.3978 4 18.7654 4.15224C19.2554 4.35523 19.6448 4.74458 19.8478 5.23463C20 5.60218 20 6.06812 20 7M10.25 4V5M13.75 4V8"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Underline01: SVGComponentProps = ({ ...props }) => {
+export const Underline01: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      =
-      <path
+      <Path
         d="M18 4V11C18 14.3137 15.3137 17 12 17C8.68629 17 6 14.3137 6 11V4M4 21H20"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const Underline02: SVGComponentProps = ({ ...props }) => {
+export const Underline02: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M19 4V10C19 13.866 15.866 17 12 17C8.13401 17 5 13.866 5 10V4M8.5 4V10C8.5 13.2218 10.6766 15.9352 13.6395 16.7501M4 21H20M3 4L10.5 4M17 4L21 4"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const UnderlineSquare: SVGComponentProps = ({ ...props }) => {
+export const UnderlineSquare: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M15.5 7V10.5C15.5 12.433 13.933 14 12 14C10.067 14 8.5 12.433 8.5 10.5V7M8 17H16M7.8 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V7.8C21 6.11984 21 5.27976 20.673 4.63803C20.3854 4.07354 19.9265 3.6146 19.362 3.32698C18.7202 3 17.8802 3 16.2 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const ZoomIn: SVGComponentProps = ({ ...props }) => {
+export const ZoomIn: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M21 21L16.65 16.65M11 8V14M8 11H14M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
 };
 
-export const ZoomOut: SVGComponentProps = ({ ...props }) => {
+export const ZoomOut: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
-      <path
+      <Path
         d="M21 21L16.65 16.65M8 11H14M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
-        stroke="inherit"
-        stroke-width="inherit"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        {...pathProps}
       />
     </SVG>
   );
