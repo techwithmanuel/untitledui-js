@@ -5,7 +5,7 @@
 ### untitledui-js is a collection of simply beautiful open source icons for React.js sourced from Untitled UI. Each icon is designed on a 24x24 grid with an emphasis on simplicity, consistency and readability.
 
 - #### <img src="./public/check.svg" width="14px" height="14px"/> Supports `.js` `.ts` `.tsx` `.jsx` extensions and is completely typesafe
-- #### <img src="./public/check.svg" width="14px" height="14px"/> Features **1100+** icons sourced from [Untitled UI](https://www.untitledui/icons.com)
+- #### <img src="./public/check.svg" width="14px" height="14px"/> Features **1100+** icons sourced from [Untitled UI](https://www.untitledui.com/icons)
 - #### <img src="./public/check.svg" width="14px" height="14px"/> Compatible with [Framer motion](https://www.framer.com)
 - #### <img src="./public/check.svg" width="14px" height="14px"/> Compatible with React. Vue, Solid and Qwik versions in development
 
