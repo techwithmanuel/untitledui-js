@@ -78,4 +78,3 @@ pathProps | `React.SVGProps<SVGPathElement>` | allows for the adding of path pro
 Components are defined with Camelcase. for example `home-01 -> Home01, activity-01 -> Activity01`
 
 If you are not familiar with the icons in Untitled UI's icon pack you can visit [Untitled UI Icons]("https://www.untitleduiicons.com")
-
