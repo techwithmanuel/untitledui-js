@@ -2,6 +2,11 @@
 
 <h1 align="center" >Untitled UI Icons</h1>
 
+<div align="center">
+![NPM](https://img.shields.io/npm/l/untitledui-js)
+[![npm version](https://badge.fury.io/js/untitledui-js.svg)](https://badge.fury.io/js/untitledui-js)
+</div>
+
 ### untitledui-js is a collection of simply beautiful open source icons for React.js sourced from Untitled UI. Each icon is designed on a 24x24 grid with an emphasis on simplicity, consistency and readability.
 
 - #### <img src="./public/check.svg" width="14px" height="14px"/> Supports `.js` `.ts` `.tsx` `.jsx` extensions and is completely typesafe
