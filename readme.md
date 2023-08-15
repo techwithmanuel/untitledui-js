@@ -9,6 +9,10 @@
 - #### <img src="./public/check.svg" width="14px" height="14px"/> Compatible with [Framer motion](https://www.framer.com)
 - #### <img src="./public/check.svg" width="14px" height="14px"/> Compatible with React. Vue, Solid and Qwik versions in development
 
+### Latest Updates:
+- Optimized for Next js 13 app dir
+- Improved stability
+
 
 <h2 align="center">Quick Tutorial</h2>
 
