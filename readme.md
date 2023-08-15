@@ -25,7 +25,7 @@ npm install untitledui-js
 ### Example :
 
 ```jsx
-import { Home01 } from "untitledui-js/general";
+import { Home01 } from "untitledui-js/icons/general";
 import { General } from "untitledui-js"
 
 const ExampleComponent = () => {
@@ -46,7 +46,7 @@ export default ExampleComponent;
 ## 1. Imports  
 The icons can be imported via two ways, the first being through direct import of the icons :
    ```jsx
-   import { HomeSmile } from "untitledui-js/general"
+   import { HomeSmile } from "untitledui-js/icons/general"
    ```
    or through category based import :
    ```jsx
