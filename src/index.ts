@@ -1,3 +1,5 @@
+"use client"
+
 import * as Alerts from "./icons/alerts";
 import * as Arrow from "./icons/arrow";
 import * as Charts from "./icons/charts";

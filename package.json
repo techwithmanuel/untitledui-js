@@ -1,6 +1,6 @@
 {
   "name": "untitledui-js",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A simple library with a fully customizable collection of untitledui icons with support for Framer Motion",
   "main": "index.js",
   "files": [
@@ -35,15 +35,13 @@
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",
     "@types/react": "^18.0.25",
-    "webpack": "^5.78.0",
-    "webpack-cli": "^5.0.1",
     "ts-loader": "^9.4.2",
-    "typescript": "^4.9.3"
-  },
-  "dependencies": {
-    "react": "^18.2.0"
+    "typescript": "^4.9.3",
+    "webpack": "^5.78.0",
+    "webpack-cli": "^5.0.1"
   },
   "peerDependencies": {
-    "framer-motion": "^10.12.8"
+    "framer-motion": "^10.15.2",
+    "react": "^18.2.0"
   }
 }

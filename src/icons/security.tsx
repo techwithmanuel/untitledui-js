@@ -1,3 +1,5 @@
+"use client"
+
 import { SVG, Path } from "../template";
 import { FC } from "react";
 import { SVGComponentProps } from "./types";
