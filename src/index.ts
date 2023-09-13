@@ -4,7 +4,7 @@ import * as Alerts from "./icons/alerts";
 import * as Arrow from "./icons/arrow";
 import * as Charts from "./icons/charts";
 import * as Communication from "./icons/communication";
-import * as Editor from "./icons/communication";
+import * as Editor from "./icons/editor";
 import * as Education from "./icons/education";
 import * as Files from "./icons/files";
 import * as Finance from "./icons/finance";
