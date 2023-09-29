@@ -901,7 +901,7 @@ export const HeartHand: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   );
 };
 
-export const HeartOcatagon: FC<SVGComponentProps> = ({
+export const HeartOctagon: FC<SVGComponentProps> = ({
   pathProps,
   ...props
 }) => {

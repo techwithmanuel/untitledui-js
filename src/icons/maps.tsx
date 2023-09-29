@@ -325,7 +325,7 @@ export const MarkerPin06: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   );
 };
 
-export const NavigaionPointer01: FC<SVGComponentProps> = ({
+export const NavigationPointer01: FC<SVGComponentProps> = ({
   pathProps,
   ...props
 }) => {

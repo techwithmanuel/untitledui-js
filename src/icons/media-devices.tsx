@@ -1124,7 +1124,7 @@ export const USBFlashDrive: FC = ({
   );
 };
 
-export const VideoRecordeOff: FC<SVGComponentProps> = ({
+export const VideoRecorderOff: FC<SVGComponentProps> = ({
   pathProps,
   ...props
 }) => {

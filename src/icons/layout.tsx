@@ -132,7 +132,7 @@ export const AlignTopArrow02: FC<SVGComponentProps> = ({
   );
 };
 
-export const AlignVertcialCenter01: FC<SVGComponentProps> = ({
+export const AlignVerticalCenter01: FC<SVGComponentProps> = ({
   pathProps,
   ...props
 }) => {

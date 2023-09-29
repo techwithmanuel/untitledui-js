@@ -73,7 +73,7 @@ export const CloudOff: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   );
 };
 
-export const CloudRaininig01: FC<SVGComponentProps> = ({
+export const CloudRaining01: FC<SVGComponentProps> = ({
   pathProps,
   ...props
 }) => {
@@ -87,7 +87,7 @@ export const CloudRaininig01: FC<SVGComponentProps> = ({
   );
 };
 
-export const CloudRaininig02: FC<SVGComponentProps> = ({
+export const CloudRaining02: FC<SVGComponentProps> = ({
   pathProps,
   ...props
 }) => {
@@ -101,7 +101,7 @@ export const CloudRaininig02: FC<SVGComponentProps> = ({
   );
 };
 
-export const CloudRaininig03: FC<SVGComponentProps> = ({
+export const CloudRaining03: FC<SVGComponentProps> = ({
   pathProps,
   ...props
 }) => {
@@ -115,7 +115,7 @@ export const CloudRaininig03: FC<SVGComponentProps> = ({
   );
 };
 
-export const CloudRaininig04: FC<SVGComponentProps> = ({
+export const CloudRaining04: FC<SVGComponentProps> = ({
   pathProps,
   ...props
 }) => {
@@ -129,7 +129,7 @@ export const CloudRaininig04: FC<SVGComponentProps> = ({
   );
 };
 
-export const CloudRaininig05: FC<SVGComponentProps> = ({
+export const CloudRaining05: FC<SVGComponentProps> = ({
   pathProps,
   ...props
 }) => {
@@ -143,7 +143,7 @@ export const CloudRaininig05: FC<SVGComponentProps> = ({
   );
 };
 
-export const CloudRaininig06: FC<SVGComponentProps> = ({
+export const CloudRaining06: FC<SVGComponentProps> = ({
   pathProps,
   ...props
 }) => {

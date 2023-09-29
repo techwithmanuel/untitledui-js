@@ -60,7 +60,7 @@ export const AlarmClockPlus: FC<SVGComponentProps> = ({
   );
 };
 
-export const AlarmClock: FC<SVGComponentProps> = ({ 
+export const AlarmClock: FC<SVGComponentProps> = ({
   pathProps, ...props }) => {
   return (
     <SVG {...props}>
@@ -339,7 +339,7 @@ export const HourGlass03: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   );
 };
 
-export const WatchCirle: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
+export const WatchCircle: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
       <Path

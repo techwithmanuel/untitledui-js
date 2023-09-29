@@ -43,7 +43,7 @@ export const ClipboardCheck: FC<SVGComponentProps> = ({
   );
 };
 
-export const ClipboardDowload: FC<SVGComponentProps> = ({
+export const ClipboardDownload: FC<SVGComponentProps> = ({
   pathProps,
   ...props
 }) => {
@@ -57,7 +57,7 @@ export const ClipboardDowload: FC<SVGComponentProps> = ({
   );
 };
 
-export const ClipboradMinus: FC<SVGComponentProps> = ({
+export const ClipboardMinus: FC<SVGComponentProps> = ({
   pathProps,
   ...props
 }) => {
