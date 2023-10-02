@@ -70,7 +70,7 @@ export const Announcement01: FC<SVGComponentProps> = ({
   );
 };
 
-export const Annoucement02: FC<SVGComponentProps> = ({
+export const Announcement02: FC<SVGComponentProps> = ({
   pathProps,
   ...props
 }) => {
@@ -81,7 +81,7 @@ export const Annoucement02: FC<SVGComponentProps> = ({
   );
 };
 
-export const Annoucement03: FC<SVGComponentProps> = ({
+export const Announcement03: FC<SVGComponentProps> = ({
   pathProps,
   ...props
 }) => {

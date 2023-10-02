@@ -905,7 +905,7 @@ export const FlipBackward: FC<SVGComponentProps> = ({
   );
 };
 
-export const FlipFoward: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
+export const FlipForward: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
       <Path
