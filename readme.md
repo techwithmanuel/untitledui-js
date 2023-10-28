@@ -2,7 +2,7 @@
 
 ## Installation 
 ```js
-npm i untitledui framer-motion
+npm i untitledui-js framer-motion
 ```
 
 ## Info
