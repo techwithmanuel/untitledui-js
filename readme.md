@@ -1,5 +1,10 @@
 ![Banner](/public/banner.png)
 
+## Installation 
+```js
+npm i untitledui framer-motion
+```
+
 ## Info
 
 - Customizabile first with framer motion support
