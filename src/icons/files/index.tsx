@@ -1,8 +1,7 @@
 "use client"
 
-import { SVG, Path } from "../template";
-import { FC } from "react";
-import { SVGComponentProps } from "./types";
+import React, { FC } from "react";
+import { SVG, Path, SVGComponentProps } from "../../template";
 
 export const Box: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (

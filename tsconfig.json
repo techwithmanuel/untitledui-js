@@ -1,11 +1,16 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist/",
-    "noImplicitAny": true,
-    "module": "es6",
-    "target": "es6",
-    "jsx": "react-jsx",
-    "allowJs": true,
-    "moduleResolution": "node"
+    "compilerOptions": {
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "target": "es6",
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "noUncheckedIndexedAccess": true,
+      "noEmit": true,
+      "traceResolution": false,
+      "jsx": "react-jsx",
+      "allowJs": true,
+      "outDir": "./dist/"
+    },
+    "lib": ["es2015"]
   }
-}

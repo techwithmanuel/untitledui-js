@@ -1,4 +1,4 @@
 node_modules
 dist
-lib
-code
+index.js
+index.d.ts

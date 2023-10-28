@@ -1,4 +1,8 @@
-.gitignore
 node_modules
-lib
-some
+package-lock.json
+LICENSE
+tsconfig.json
+src
+.gitignore
+public
+dist

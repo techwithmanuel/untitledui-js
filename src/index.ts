@@ -1,39 +1,20 @@
 "use client"
 
-import * as Alerts from "./icons/alerts";
-import * as Arrow from "./icons/arrow";
-import * as Charts from "./icons/charts";
-import * as Communication from "./icons/communication";
-import * as Editor from "./icons/editor";
-import * as Education from "./icons/education";
-import * as Files from "./icons/files";
-import * as Finance from "./icons/finance";
-import * as General from "./icons/general";
-import * as Layout from "./icons/layout";
-import * as Maps from "./icons/maps";
-import * as MediaDevices from "./icons/media-devices";
-import * as Security from "./icons/security";
-import * as Shapes from "./icons/shapes";
-import * as Time from "./icons/time";
-import * as Users from "./icons/users";
-import * as Weather from "./icons/weather";
+export * as Alerts from "./icons/alerts";
+export * as Arrow from "./icons/arrow";
+export * as Charts from "./icons/charts";
+export * as Communication from "./icons/communication";
+export * as Editor from "./icons/editor";
+export * as Education from "./icons/education";
+export * as Files from "./icons/files";
+export * as Finance from "./icons/finance";
+export * as General from "./icons/general";
+export * as Layout from "./icons/layout";
+export * as Maps from "./icons/maps";
+export * as MediaDevices from "./icons/media-devices";
+export * as Security from "./icons/security";
+export * as Shapes from "./icons/shapes";
+export * as Time from "./icons/time";
+export * as Users from "./icons/users";
+export * as Weather from "./icons/weather";
 
-export {
-  Alerts,
-  Arrow,
-  Charts,
-  Communication,
-  Editor,
-  Education,
-  Files,
-  Finance,
-  General,
-  Layout,
-  Maps,
-  MediaDevices,
-  Security,
-  Shapes,
-  Time,
-  Users,
-  Weather,
-};
