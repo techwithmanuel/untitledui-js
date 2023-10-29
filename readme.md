@@ -1,26 +1,37 @@
 ![Banner](/public/banner.png)
 
-## Installation 
+<div style="display: flex; justify-content: space-around;">
+
+[![NPM Version](https://img.shields.io/npm/v/untitledui-js.svg)](https://www.npmjs.com/package/untitledui-js)
+
+[![NPM Downloads](https://img.shields.io/npm/dt/untitledui-js.svg)](https://www.npmjs.com/package/untitledui-js)
+
+[![LICENSE](https://img.shields.io/npm/l/untitledui-js.svg)](https://github.com/techwithmanuel/untitledui-js/blob/master/LICENSE)
+
+[![Commit](https://img.shields.io/github/last-commit/techwithmanuel/untitledui-js.svg)](https://github.com/techwithmanuel/untitledui-js/commits/master)
+
+</div>
+
+## Installation
+
 ```js
 npm i untitledui-js framer-motion
 ```
 
 ## Info
 
-- Customizabile first with framer motion support
+- Customizable first with framer motion support
   ```tsx
-  <Home01 size="60px" stroke="2px" pathProps={{}} />
+  <Home01 size="60px" strokeWidth="2px" stroke="#000" initial={...} animate={...} pathProps={{
+    initial: { pathLength: 0 },
+    animate: { pathLength: 1 }
+  }} />
   ```
   - The pathProps prop targets the path property of the svg
   - Framer motions props can be passed directly to the svg component or the pathProps
-  ```tsx
-     <Home01 size="60px" stroke="2px" animate={} pathProps={{
-      animate:
-     }} />
-  ```
 - Compatible with Nextjs v13
 - Includes 1100+ icons sourced from [untitledui-icons](https://www.untitledui.com/icons)
-- Category based imports are now the ONLY way of importing icons
+- Category based imports are now the ONLY way of importing icons in untitledui-js
 
   ```tsx
   import { Communication } from "untitledui-js";
