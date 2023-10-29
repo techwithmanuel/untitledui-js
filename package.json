@@ -1,6 +1,6 @@
 {
   "name": "untitledui-js",
-  "version": "2.0.72",
+  "version": "2.0.73",
   "description": "A simple library with a fully customizable collection of untitledui icons with out of the box support for framer motion",
   "main": "index.js",
   "scripts": {

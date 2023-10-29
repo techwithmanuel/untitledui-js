@@ -20,9 +20,10 @@ npm i untitledui-js framer-motion
 
 ## Info
 
+- Official Website and Documentation [docs](https://untitledui.vercel.app)
 - Customizable first with framer motion support
   ```tsx
-  <Home01 size="60px" strokeWidth="2px" stroke="#000" initial={...} animate={...} pathProps={{
+  <Home01 size="60px" strokeWidth="2" stroke="#000" initial={...} animate={...} pathProps={{
     initial: { pathLength: 0 },
     animate: { pathLength: 1 }
   }} />
@@ -42,5 +43,4 @@ npm i untitledui-js framer-motion
       );
   }
   ```
-
 - For more information view the [docs](https://untitledui.vercel.app)
