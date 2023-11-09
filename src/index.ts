@@ -1,5 +1,6 @@
-"use client"
+"use client";
 
+export { SVGComponentProps } from "./template";
 export * as Alerts from "./icons/alerts";
 export * as Arrow from "./icons/arrow";
 export * as Charts from "./icons/charts";
@@ -17,4 +18,4 @@ export * as Shapes from "./icons/shapes";
 export * as Time from "./icons/time";
 export * as Users from "./icons/users";
 export * as Weather from "./icons/weather";
-
+export * as Development from "./icons/development";
