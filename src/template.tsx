@@ -1,18 +1,16 @@
 "use client";
 
-import { FC, forwardRef, Ref } from "react";
-import { motion, SVGMotionProps } from "framer-motion";
+import React, { FC, forwardRef, Ref } from "react";
 
-interface SVGParentProps extends SVGMotionProps<SVGSVGElement> {
+interface SVGParentProps extends React.SVGProps<SVGSVGElement> {
   size?: string;
 }
-interface PathProps extends SVGMotionProps<SVGPathElement> {}
+interface PathProps extends React.SVGProps<SVGPathElement> {}
 
-export interface SVGComponentProps extends SVGMotionProps<SVGSVGElement> {
+export interface SVGComponentProps extends React.SVGProps<SVGSVGElement> {
   size?: string;
-  pathProps?: SVGMotionProps<SVGPathElement>;
+  pathProps?: React.SVGProps<SVGPathElement>;
 }
-
 
 const SVG: FC<SVGParentProps> = forwardRef<SVGSVGElement, SVGParentProps>(
   (
@@ -31,7 +29,7 @@ const SVG: FC<SVGParentProps> = forwardRef<SVGSVGElement, SVGParentProps>(
     ref: Ref<SVGSVGElement>
   ) => {
     return (
-      <motion.svg
+      <svg
         className={className}
         width={size && width ? width : size ? size : "24"}
         height={size && height ? height : size ? size : "24"}
@@ -44,7 +42,7 @@ const SVG: FC<SVGParentProps> = forwardRef<SVGSVGElement, SVGParentProps>(
         {...props}
       >
         {children}
-      </motion.svg>
+      </svg>
     );
   }
 );
@@ -52,7 +50,7 @@ const SVG: FC<SVGParentProps> = forwardRef<SVGSVGElement, SVGParentProps>(
 const Path: FC<PathProps> = forwardRef<SVGPathElement, PathProps>(
   (props, ref: Ref<SVGPathElement>) => {
     return (
-      <motion.path
+      <path
         {...props}
         stroke={props.stroke ? props.stroke : "inherit"}
         strokeWidth={props.width ? props.width : "inherit"}

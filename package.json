@@ -1,7 +1,7 @@
 {
-  "name": "untitledui-js",
-  "version": "2.0.74",
-  "description": "A simple library with a fully customizable collection of untitledui icons with out of the box support for framer motion",
+  "name": "untitledui-js-base",
+  "version": "1.0.0",
+  "description": "A simple library with a fully customizable collection of untitledui icons",
   "main": "index.js",
   "scripts": {
     "build": "tsup src/index.ts --format cjs --dts --minify"
@@ -30,19 +30,16 @@
     "url": "https://github.com/techwithmanuel/untitledui-js/issues"
   },
   "homepage": "https://github.com/techwithmanuel/untitledui-js#readme",
-  "dependencies": {
-  },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.3",
-    "ts-loader": "^9.5.0",
-    "webpack-cli": "^5.1.4",
     "@types/node": "^20.8.8",
     "@types/react": "^18.2.31",
+    "ts-loader": "^9.5.0",
     "tsup": "^7.2.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "webpack-cli": "^5.1.4"
   },
   "peerDependencies": {
-    "framer-motion": "^10.16.4",
     "react": "^18.2.0"
   }
 }
