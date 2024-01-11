@@ -18,6 +18,14 @@
 npm i untitledui-js framer-motion
 ```
 
+or
+
+```js
+npm i untitledui-js-base
+```
+
+If you want to use the library without frmaer motion
+
 ## Info
 
 - Official Website and Documentation [docs](https://untitledui.vercel.app)
@@ -32,7 +40,7 @@ npm i untitledui-js framer-motion
   - Framer motions props can be passed directly to the svg component or the pathProps
 - Compatible with Nextjs v13
 - Includes 1100+ icons sourced from [untitledui-icons](https://www.untitledui.com/icons)
-- Category based imports are now the ONLY way of importing icons in untitledui-js
+- Category based imports and Regular imports are now both supported
 
   ```tsx
   import { Communication } from "untitledui-js";
@@ -43,4 +51,5 @@ npm i untitledui-js framer-motion
       );
   }
   ```
+
 - For more information view the [docs](https://untitledui.vercel.app)

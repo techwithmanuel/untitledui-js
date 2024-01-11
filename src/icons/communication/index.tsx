@@ -386,7 +386,7 @@ export const MessageNotificationCircle: FC<SVGComponentProps> = ({
   );
 };
 
-export const MessageNotificationSquare: FC<SVGComponentProps> = ({
+export const MessageNotificationSquare02: FC<SVGComponentProps> = ({
   pathProps,
   ...props
 }) => {
