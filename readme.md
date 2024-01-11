@@ -12,7 +12,7 @@ or
 npm i untitledui-js-base
 ```
 
-If you want to use the library without frmaer motion
+If you want to use the library without framer motion
 
 ## Info
 
