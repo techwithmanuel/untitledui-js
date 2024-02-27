@@ -1,14 +1,12 @@
 ![Banner](/public/banner.png)
 
-<div style="display:flex; align-items:center;">
+<div style="display:flex; align-items:center; flex-direction: row; justify-content: space-around;">
 
-<a href="https://www.untitledui.com/free-icons">
-    <img src="./public/logo-count.png" alt="Logo count">
-</a>
+<a  href="https://www.untitledui.com/free-icons">
+    <img align=top src="./public/logo-count.png" alt="Logo count" style="width:200px"></a>
 
-<div style="width: 15px"></div>
 <a href="https://untitledui.vercel.app/">
-    <img src="./public/documentation-button.png" alt="Documentation button">
+    <img align=top src="./public/documentation-button.png" alt="Documentation button" style="width:200px">
 </a>
 
 </div>
