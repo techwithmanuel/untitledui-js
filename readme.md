@@ -1,47 +1,71 @@
 ![Banner](/public/banner.png)
 
-## Installation
+<div style="display:flex; align-items:center;">
+
+[![Logo count](/public/logo-count.png)](https://www.untitledui.com/free-icons)
+
+<div style="width: 15px"></div>
+
+[![Documentation button](/public/documentation-button.png)](https://untitledui.vercel.app/)
+
+
+</div>
+
+# Get Started
+
+### Installation
+
+#### 1. Setup with framer-motion
 
 ```js
 npm i untitledui-js framer-motion
 ```
 
-or
+#### 2. Setup without framer-motion (base)
 
 ```js
 npm i untitledui-js-base
 ```
 
-If you want to use the library without framer motion
+### Basic Usage
 
-## Info
+#### 1. Imports
 
-- Official Website and Documentation [docs](https://untitledui.vercel.app)
-- Base version of [untitledui-js](https://www.npmjs.com/package/untitledui-js) without framer motion support
-- Compatible with Nextjs v13
-- Includes 1100+ icons sourced from [untitledui-icons](https://www.untitledui.com/icons)
-- Category based imports and Regular Imports are supported
+```tsx
+import { Communication } from "untitledui-js"
+<-- Category Import-->
 
-  ```tsx
-  import { Communication } from "untitledui-js";
+import { AnnotationAlert } from "untitledui-js"
+<-- Direct Import  -->
 
-  export function Component () {
-     return (
-          <Communication.AnnotationAlert .../>
-      );
-  }
-  ```
+```
 
-  OR
+#### 2. Rendering on the DOM
 
-  ```tsx
-  import { AnnotationAlert } from "untitledui-js";
+```tsx
+//...imports
 
-  export function Component () {
-    return (
-         <AnnotationAlert .../>
-     );
-  }
-  ```
+const App = () => {
+  return (
+    <Fragment>
+      <Communication.AnnotationAlert />
 
-- For more information view the [docs](https://untitledui.vercel.app)
+      <AnnotationAlert />
+    </Fragment>
+  );
+};
+```
+
+#### 3. Customization
+
+```tsx
+return (
+  <AnnotationAlert
+    size={"15"} //adjusts both width and height properties
+    pathProps={{
+      ...props,
+    }} //allows the adjustment of the path properties directly
+    {...props} //other svg properties
+  />
+);
+```
