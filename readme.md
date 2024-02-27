@@ -1,18 +1,7 @@
 ![Banner](/public/banner.png)
 
-<div style="display:flex; align-items:center; flex-direction: row; justify-content: space-around;" align="center">
+# Get Started  → [Documentation](https://untitledui.vercel.app/)
 
-<a  href="https://www.untitledui.com/free-icons" align='center' style="width:200px">
-    <img src="./public/logo-count.svg" alt="Logo count" style="width:200px" />
-</a>
-
-<a href="https://untitledui.vercel.app/" align='center' style="width:200px"> 
-    <img src="./public/doc-button.svg" alt="Documentation button" style="width:200px" />
-</a>
-
-</div>
-
-# Get Started
 
 ### Installation
 
