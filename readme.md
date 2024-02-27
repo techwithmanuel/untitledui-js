@@ -2,12 +2,14 @@
 
 <div style="display:flex; align-items:center;">
 
-[![Logo count](/public/logo-count.png)](https://www.untitledui.com/free-icons)
+<a href="https://www.untitledui.com/free-icons">
+    <img src="./public/logo-count.png" alt="Logo count">
+</a>
 
 <div style="width: 15px"></div>
-
-[![Documentation button](/public/documentation-button.png)](https://untitledui.vercel.app/)
-
+<a href="https://untitledui.vercel.app/">
+    <img src="./public/documentation-button.png" alt="Documentation button">
+</a>
 
 </div>
 
