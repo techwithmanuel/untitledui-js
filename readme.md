@@ -1,6 +1,6 @@
 ![Banner](/public/banner.png)
 
-<div style="display:flex; align-items:center; flex-direction: row; justify-content: space-around;">
+<div style="display:flex; align-items:center; flex-direction: row; justify-content: space-around;" align="center">
 
 <a  href="https://www.untitledui.com/free-icons">
     <img align=top src="./public/logo-count.png" alt="Logo count" style="width:200px"></a>
