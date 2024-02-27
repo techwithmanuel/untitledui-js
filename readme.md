@@ -3,10 +3,11 @@
 <div style="display:flex; align-items:center; flex-direction: row; justify-content: space-around;" align="center">
 
 <a  href="https://www.untitledui.com/free-icons">
-    <img src="./public/logo-count.png" alt="Logo count" style="width:200px"></a>
+    <img src="./public/logo-count.png" alt="Logo count" style="width:200px"/>
+</a>
 
 <a href="https://untitledui.vercel.app/">
-    <img  src="./public/documentation-button.png" alt="Documentation button" style="width:200px">
+    <img  src="./public/documentation-button.png" alt="Documentation button" style="width:200px"/>
 </a>
 
 </div>
