@@ -2,12 +2,12 @@
 
 <div style="display:flex; align-items:center; flex-direction: row; justify-content: space-around;" align="center">
 
-<a  href="https://www.untitledui.com/free-icons" align='center'>
-    <img src="./public/logo-count.png" alt="Logo count" />
+<a  href="https://www.untitledui.com/free-icons" align='center' style="width:200px">
+    <img src="./public/logo-count.svg" alt="Logo count" style="width:200px" />
 </a>
 
-<a href="https://untitledui.vercel.app/" align='center'> 
-    <img src="./public/documentation-button.png" alt="Documentation button" />
+<a href="https://untitledui.vercel.app/" align='center' style="width:200px"> 
+    <img src="./public/doc-button.svg" alt="Documentation button" style="width:200px" />
 </a>
 
 </div>
