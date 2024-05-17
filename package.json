@@ -2,7 +2,7 @@
   "name": "untitledui-js",
   "description": "A simple library with a fully customizable collection of untitledui icons with out of the box support for framer motion",
   "private": false,
-  "version": "2.1.16",
+  "version": "2.1.161",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -35,16 +35,16 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
-    "vite-plugin-dts": "^3.9.1",
-    "fs": "^0.0.1-security",
-    "path": "^0.12.7"
+    "vite-plugin-dts": "^3.9.1"
   },
   "peerDependencies": {
+    "framer-motion": "^11.2.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "framer-motion": "^11.2.3"
+    "react-dom": "^18.2.0"
   },
   "keywords": [
     "react",

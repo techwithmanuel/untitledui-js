@@ -2,8 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import dts from "vite-plugin-dts";
 import { resolve } from "path";
+import { builtinModules } from "module";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
@@ -12,15 +12,29 @@ export default defineConfig({
     }),
   ],
   build: {
+    assetsInlineLimit: 0,
     lib: {
-      entry: resolve(__dirname, "src/index.tsx"),
+      entry: resolve(__dirname, "src/index.ts"),
       name: "untitled-ui",
       fileName: "index",
+      formats: ["es"],
     },
     rollupOptions: {
       preserveEntrySignatures: "strict",
-      external: ["framer-motion", "react", "react-dom"],
+      external: [
+        "framer-motion",
+        "react",
+        "react-dom",
+        ...builtinModules,
+        /^react\//, // Ensure all submodules of React are treated as external
+        /^react-dom\//,
+      ],
       output: {
+        entryFileNames: "[name].js",
+        chunkFileNames: "icons/[name].js",
+        assetFileNames: "icons/[name].[ext]",
+        preserveModules: true,
+
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
@@ -28,5 +42,10 @@ export default defineConfig({
       },
     },
     emptyOutDir: true,
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      treeShaking: true,
+    },
   },
 });
