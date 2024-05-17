@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC } from "react";
+import { FC } from "react";
 import { SVG, Path, SVGComponentProps } from "../../template";
 
 export const BarChart01: FC<SVGComponentProps> = ({ pathProps, ...props }) => {

@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import React, { FC } from "react";
+import { FC } from "react";
 import { SVG, Path, SVGComponentProps } from "../../template";
 
 export const AlarmClockCheck: FC<SVGComponentProps> = ({
@@ -59,8 +59,7 @@ export const AlarmClockPlus: FC<SVGComponentProps> = ({
   );
 };
 
-export const AlarmClock: FC<SVGComponentProps> = ({
-  pathProps, ...props }) => {
+export const AlarmClock: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
   return (
     <SVG {...props}>
       <Path
