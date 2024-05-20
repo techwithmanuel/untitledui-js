@@ -19,6 +19,28 @@ Additionally, Untitled UI Icons supports SVG animations without the need for any
 - Easy access to design assets with Untitled UI's free icons library.
 - Actively supported and maintained: Untitled UI Icons is regularly updated and improved to meet the evolving needs of developers and designers.
 
+### Note
+
+- Framer's svg animation properties are to be passed directly to the icon `<Home01 initial={{}} animate={{}} />` or path as `pathProps` if required
+
+- If you aren't familiar with svg properties, you can view this documentation by [documentation by mozilla](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute)
+
+- You can also view the current [documentation site in beta](https://untitledui.vercel.app/)
+
+- For simple animations of svg paths you can [read this article by Noel](https://blog.noelcserepy.com/how-to-animate-svg-paths-with-framer-motion)
+
+- Category based imports have been deprecated
+
+- Icons can now be imported lazily on `untitledui-js` with the `LazyIcon` component which takes in the name of the icon and lazily loads the icon, support would be rolling out for the base version soon
+
+```ts
+import { LazyIcon } from "untitledui-js";
+
+export default function App() {
+  return <LazyIcon name="Activity" {...props} />;
+}
+```
+
 ## Installation
 
 #### Setup with framer motion support
@@ -73,15 +95,3 @@ return (
   />
 );
 ```
-
-### Note
-
-- Framer's svg animation properties are to be passed directly to the icon `<Home01 initial={{}} animate={{}} />` or path as `pathProps` if required
-
-- If you aren't familiar with svg properties, you can view this documentation by [documentation by mozilla](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute)
-
-- You can also view the current [documentation site in beta](https://untitledui.vercel.app/)
-
-- For simple animations of svg paths you can [read this article by Noel](https://blog.noelcserepy.com/how-to-animate-svg-paths-with-framer-motion)
-
-- Category based imports have been deprecated
