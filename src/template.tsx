@@ -63,7 +63,7 @@ const Path: FC<PathProps> = forwardRef<SVGPathElement, PathProps>(
   }
 );
 
-const Fallback = () => {
+const DefaultLazyImportFallback = () => {
   return (
     <svg
       width="24"
@@ -76,5 +76,4 @@ const Fallback = () => {
   );
 };
 
-
-export { SVG, Path, Fallback };
+export { SVG, Path, DefaultLazyImportFallback };
