@@ -72,13 +72,7 @@ import { AnnotationAlert } from "untitledui-js"
 //...imports
 
 const App = () => {
-  return (
-    <Fragment>
-      <Communication.AnnotationAlert />
-
-      <AnnotationAlert />
-    </Fragment>
-  );
+  return <AnnotationAlert />;
 };
 ```
 
