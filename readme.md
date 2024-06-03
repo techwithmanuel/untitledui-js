@@ -31,13 +31,16 @@ Additionally, Untitled UI Icons supports SVG animations without the need for any
 
 - Category based imports have been deprecated
 
-- Icons can now be imported lazily on `untitledui-js` with the `LazyIcon` component which takes in the name of the icon and lazily loads the icon, support would be rolling out for the base version soon
+- Icons can now be imported lazily on `untitledui-js` with the `LazyIcon` component which takes in the name of the icon and lazily loads the icon.
 
 ```ts
 import { LazyIcon } from "untitledui-js";
 
 export default function App() {
-  return <LazyIcon name="Activity" {...props} />;
+  //fallback is optional
+  return (
+    <LazyIcon name="Activity" {...props} fallback={<div>loading...</div>} />
+  );
 }
 ```
 
