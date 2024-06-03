@@ -14,7 +14,7 @@ export default defineConfig({
   build: {
     assetsInlineLimit: 0,
     lib: {
-      entry: resolve(__dirname, "src/index.ts"),
+      entry: resolve(__dirname, "src/index.tsx"),
       name: "untitled-ui",
       fileName: "index",
       formats: ["es"],
