@@ -30,6 +30,7 @@ export default defineConfig({
         /^react-dom\//,
       ],
       output: {
+        manualChunks: undefined,
         entryFileNames: "[name].js",
         chunkFileNames: "icons/[name].js",
         assetFileNames: "icons/[name].[ext]",
