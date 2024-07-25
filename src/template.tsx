@@ -13,6 +13,8 @@ export interface SVGComponentProps extends SVGMotionProps<SVGSVGElement> {
   pathProps?: SVGMotionProps<SVGPathElement>;
 }
 
+export interface SVGComponent extends FC<SVGComponentProps> {}
+
 const SVG: FC<SVGParentProps> = forwardRef<SVGSVGElement, SVGParentProps>(
   (
     {
@@ -32,12 +34,12 @@ const SVG: FC<SVGParentProps> = forwardRef<SVGSVGElement, SVGParentProps>(
     return (
       <motion.svg
         className={className}
-        width={size && width ? width : size ? size : "24"}
-        height={size && height ? height : size ? size : "24"}
-        viewBox={viewBox ? viewBox : "0 0 24 24"}
-        fill={fill ? fill : "none"}
-        stroke={stroke ? stroke : "currentColor"}
-        strokeWidth={strokeWidth ? strokeWidth : "2"}
+        width={width || size || "24"}
+        height={height || size || "24"}
+        viewBox={viewBox || "0 0 24 24"}
+        fill={fill || "none"}
+        stroke={stroke || "currentColor"}
+        strokeWidth={strokeWidth || "2"}
         xmlns="http://www.w3.org/2000/svg"
         ref={ref}
         {...props}
@@ -53,10 +55,10 @@ const Path: FC<PathProps> = forwardRef<SVGPathElement, PathProps>(
     return (
       <motion.path
         {...props}
-        stroke={props.stroke ? props.stroke : "inherit"}
-        strokeWidth={props.width ? props.width : "inherit"}
-        strokeLinecap={props.strokeLinecap ? props.strokeLinecap : "round"}
-        strokeLinejoin={props.strokeLinejoin ? props.strokeLinejoin : "round"}
+        stroke={props.stroke || "inherit"}
+        strokeWidth={props.width || "inherit"}
+        strokeLinecap={props.strokeLinecap || "round"}
+        strokeLinejoin={props.strokeLinejoin || "round"}
         ref={ref}
       />
     );

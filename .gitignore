@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 .env
+index.cjs
+icons.cjs
+lazy-array.cjs

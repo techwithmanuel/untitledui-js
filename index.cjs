@@ -23,16 +23,8 @@ function generateExportStatements() {
   const exportStatements = iconFiles.map((file) => {
     const fileName = path.basename(file, path.extname(file));
     return `
-   
-    export const ${fileName}:FC<SVGComponentProps> = ({...props}: SVGComponentProps) => {
-      const Icon = lazy(() => import('./icons/${fileName}'))
-
-      return (
-        <Suspense fallback={<DefaultLazyImportFallback/>}>
-        <Icon {...props} />
-        </Suspense>
-      )
-    }`;
+export { default as ${fileName}, default as ${fileName}Icon  } from "./icons/${fileName}"  
+    `;
   });
   return exportStatements.join("\n");
 }

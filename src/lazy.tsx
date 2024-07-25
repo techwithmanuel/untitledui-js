@@ -1141,7 +1141,7 @@ const LazyIcon: FC<LazyIconProps> = ({ name, fallback, ...props }) => {
   const Icon = lazy(() => import(/* @vite-ignore */ `./icons/${name}`));
 
   return (
-    <Suspense fallback={fallback ? fallback : <DefaultLazyImportFallback />}>
+    <Suspense fallback={fallback || <DefaultLazyImportFallback />}>
       <Icon {...props} />
     </Suspense>
   );
