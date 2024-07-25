@@ -1,52 +1,34 @@
 import { defineConfig } from "vite";
+import { extname, relative, resolve } from "path";
+import { fileURLToPath } from "node:url";
+import { glob } from "glob";
 import react from "@vitejs/plugin-react-swc";
 import dts from "vite-plugin-dts";
-import { resolve } from "path";
-import { builtinModules } from "module";
 
 export default defineConfig({
-  plugins: [
-    react(),
-    dts({
-      insertTypesEntry: true,
-    }),
-  ],
+  plugins: [react(), dts({ include: ["src"] })],
   build: {
-    assetsInlineLimit: 0,
+    copyPublicDir: false,
     lib: {
-      entry: resolve(__dirname, "src/index.tsx"),
-      name: "untitled-ui",
-      fileName: "index",
+      entry: resolve(__dirname, "index/index.ts"),
       formats: ["es"],
     },
     rollupOptions: {
-      preserveEntrySignatures: "strict",
-      external: [
-        "framer-motion",
-        "react",
-        "react-dom",
-        ...builtinModules,
-        /^react\//, // Ensure all submodules of React are treated as external
-        /^react-dom\//,
-      ],
+      external: ["react", "react/jsx-runtime", "framer-motion"],
+      input: Object.fromEntries(
+        glob
+          .sync("src/**/*.{ts,tsx}", {
+            ignore: ["src/**/*.d.ts"],
+          })
+          .map((file) => [
+            relative("src", file.slice(0, file.length - extname(file).length)),
+            fileURLToPath(new URL(file, import.meta.url)),
+          ])
+      ),
       output: {
-        manualChunks: undefined,
+        assetFileNames: "assets/[name][extname]",
         entryFileNames: "[name].js",
-        chunkFileNames: "icons/[name].js",
-        assetFileNames: "icons/[name].[ext]",
-        preserveModules: true,
-
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
-        },
       },
-    },
-    emptyOutDir: true,
-  },
-  optimizeDeps: {
-    esbuildOptions: {
-      treeShaking: true,
     },
   },
 });
