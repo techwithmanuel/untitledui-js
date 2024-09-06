@@ -8,6 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+commands
 dist
 dist-ssr
 *.local
@@ -24,6 +25,7 @@ dist-ssr
 *.sw?
 
 .env
+
 index.cjs
 icons.cjs
 lazy-array.cjs

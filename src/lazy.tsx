@@ -1,3 +1,5 @@
+"use client"
+
 import { Suspense, lazy, FC } from "react";
 import { SVGComponentProps, DefaultLazyImportFallback } from "./template";
 

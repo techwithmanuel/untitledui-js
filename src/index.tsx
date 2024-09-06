@@ -1,3 +1,5 @@
+"use client"
+
 export type { SVGComponentProps, SVGComponent } from "./template";
 
 export { default as LazyIcon } from "./lazy";
