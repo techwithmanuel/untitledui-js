@@ -6,7 +6,13 @@ import react from "@vitejs/plugin-react-swc";
 import dts from "vite-plugin-dts";
 
 export default defineConfig({
-  plugins: [react(), dts({ include: ["src"] })],
+  plugins: [
+    react(),
+    dts({
+      include: ["src"],
+      exclude: ["src/icons/**"], // Exclude the icons folder from .d.ts generation
+    }),
+  ],
   build: {
     copyPublicDir: false,
     lib: {
