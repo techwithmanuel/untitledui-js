@@ -2,6 +2,7 @@ node_modules
 package-lock.json
 LICENSE
 tsconfig.json
+commands
 src
 .gitignore
 public
