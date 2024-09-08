@@ -2,6 +2,7 @@
 
 import { FC, forwardRef, Ref } from "react";
 import { SVGMotionProps, motion } from "framer-motion";
+import { IconNames } from ".";
 
 interface SVGParentProps extends SVGMotionProps<SVGSVGElement> {
   size?: string;
@@ -14,6 +15,11 @@ export interface SVGComponentProps extends SVGMotionProps<SVGSVGElement> {
 }
 
 export interface SVGComponent extends FC<SVGComponentProps> {}
+
+export interface LazyIconProps extends SVGComponentProps {
+  name: IconNames;
+  fallback?: React.ReactNode;
+}
 
 const SVG: FC<SVGParentProps> = forwardRef<SVGSVGElement, SVGParentProps>(
   (

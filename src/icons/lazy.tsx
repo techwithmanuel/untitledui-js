@@ -1,13 +1,7 @@
 "use client";
 
 import { Suspense, lazy, FC } from "react";
-import { SVGComponentProps, DefaultLazyImportFallback } from "../template";
-import { IconNames } from "..";
-
-interface LazyIconProps extends SVGComponentProps {
-  name: IconNames;
-  fallback?: React.ReactNode;
-}
+import { DefaultLazyImportFallback, LazyIconProps } from "../template";
 
 const LazyIcon: FC<LazyIconProps> = ({ name, fallback, ...props }) => {
   const Icon = lazy(() => import(/* @vite-ignore */ `./${name}`));
