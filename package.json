@@ -59,5 +59,8 @@
     "animation",
     "javascript",
     "icons library"
-  ]
+  ],
+  "dependencies": {
+    "glob": "^10.4.5"
+  }
 }
