@@ -9,7 +9,7 @@ const ArrowUpRight: FC<SVGComponentProps> = ({
 }) => {
   return (
     <SVG {...props}>
-      <Path d="M7 17L17 7M17 7H7M17 7V17" {...pathProps} />
+      <Path d="M6 18L18 6M18 6H10M18 6V14" {...pathProps} />
     </SVG>
   );
 };

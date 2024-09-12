@@ -3,10 +3,13 @@
 import { FC } from "react";
 import { SVG, Path, SVGComponentProps } from "../template";
 
-const ArrowUp: FC<SVGComponentProps> = ({ pathProps, ...props }) => {
+const ArrowUp: FC<SVGComponentProps> = ({
+  pathProps,
+  ...props
+}) => {
   return (
     <SVG {...props}>
-      <Path d="M12 19V5M12 5L5 12M12 5L19 12" {...pathProps} />
+      <Path d="M12 20V4M12 4L6 10M12 4L18 10" {...pathProps} />
     </SVG>
   );
 };

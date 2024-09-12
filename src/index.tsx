@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { FC } from "react";
 import { LazyIconProps, SVGComponentProps } from "./template";
@@ -69,18 +69,12 @@ export type IconNames =
   | "ArrowCircleUpLeft"
   | "ArrowCircleUpRight"
   | "ArrowDown"
+  | "ArrowLeft"
   | "ArrowDownLeft"
   | "ArrowDownRight"
-  | "ArrowLeft"
-  | "ArrowNarrowDown"
-  | "ArrowNarrowDownLeft"
-  | "ArrowNarrowDownRight"
-  | "ArrowNarrowLeft"
-  | "ArrowNarrowRight"
-  | "ArrowNarrowUp"
-  | "ArrowNarrowUpLeft"
-  | "ArrowNarrowUpRight"
   | "ArrowRight"
+  | "ArrowUp"
+  | "ArrowUpLeft"
   | "ArrowSquareDown"
   | "ArrowSquareDownLeft"
   | "ArrowSquareDownRight"
@@ -89,8 +83,6 @@ export type IconNames =
   | "ArrowSquareUp"
   | "ArrowSquareUpLeft"
   | "ArrowSquareUpRight"
-  | "ArrowUp"
-  | "ArrowUpLeft"
   | "ArrowUpRight"
   | "ArrowsDown"
   | "ArrowsLeft"
@@ -1416,40 +1408,6 @@ export const ArrowDownRight: FC<SVGComponentProps> = ArrowDownRightIcon;
 import ArrowLeftIcon from "./icons/ArrowLeft";
 
 export const ArrowLeft: FC<SVGComponentProps> = ArrowLeftIcon;
-
-import ArrowNarrowDownIcon from "./icons/ArrowNarrowDown";
-
-export const ArrowNarrowDown: FC<SVGComponentProps> = ArrowNarrowDownIcon;
-
-import ArrowNarrowDownLeftIcon from "./icons/ArrowNarrowDownLeft";
-
-export const ArrowNarrowDownLeft: FC<SVGComponentProps> =
-  ArrowNarrowDownLeftIcon;
-
-import ArrowNarrowDownRightIcon from "./icons/ArrowNarrowDownRight";
-
-export const ArrowNarrowDownRight: FC<SVGComponentProps> =
-  ArrowNarrowDownRightIcon;
-
-import ArrowNarrowLeftIcon from "./icons/ArrowNarrowLeft";
-
-export const ArrowNarrowLeft: FC<SVGComponentProps> = ArrowNarrowLeftIcon;
-
-import ArrowNarrowRightIcon from "./icons/ArrowNarrowRight";
-
-export const ArrowNarrowRight: FC<SVGComponentProps> = ArrowNarrowRightIcon;
-
-import ArrowNarrowUpIcon from "./icons/ArrowNarrowUp";
-
-export const ArrowNarrowUp: FC<SVGComponentProps> = ArrowNarrowUpIcon;
-
-import ArrowNarrowUpLeftIcon from "./icons/ArrowNarrowUpLeft";
-
-export const ArrowNarrowUpLeft: FC<SVGComponentProps> = ArrowNarrowUpLeftIcon;
-
-import ArrowNarrowUpRightIcon from "./icons/ArrowNarrowUpRight";
-
-export const ArrowNarrowUpRight: FC<SVGComponentProps> = ArrowNarrowUpRightIcon;
 
 import ArrowRightIcon from "./icons/ArrowRight";
 

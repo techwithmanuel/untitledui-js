@@ -9,7 +9,7 @@ const ArrowDownLeft: FC<SVGComponentProps> = ({
 }) => {
   return (
     <SVG {...props}>
-      <Path d="M17 7L7 17M7 17H17M7 17V7" {...pathProps} />
+      <Path d="M18 6L6 18M6 18H14M6 18V10" {...pathProps} />
     </SVG>
   );
 };
