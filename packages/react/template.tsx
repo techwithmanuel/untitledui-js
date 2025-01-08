@@ -130,8 +130,6 @@ export const createUntitledIcon = (
 ): React.ForwardRefExoticComponent<
   Omit<UntitledProps, "ref"> & React.RefAttributes<SVGSVGElement>
 > => {
-  console.log(iconNode);
-
   const Component = React.forwardRef<SVGSVGElement, UntitledProps>(
     ({ className, ...props }, ref) => (
       <Icon

@@ -1,6 +1,6 @@
 {
   "name": "untitledui-js",
-  "version": "2.2.18-alpha",
+  "version": "2.2.20",
   "exports": {
     "./react": {
       "import": "./dist/react/index.mjs",
