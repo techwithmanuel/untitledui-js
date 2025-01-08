@@ -1,11 +1,8 @@
 node_modules
-package-lock.json
-LICENSE
-tsconfig.json
-commands
-src
+icons
+packages
 .gitignore
-public
-dist
-LICENSE
-.env
+pnpm-lock.yaml
+.DS_Store
+docs
+tsup.config.ts
