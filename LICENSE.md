@@ -1,31 +1,21 @@
-# Untitled UI JS License (CPL - Custom Proprietary License)
+MIT License
 
-This license outlines the terms under which the **untitledui-js** library may be used. By using this library, you agree to the following conditions:
+Copyright (c) 2025 Emmanuel C. Alozie
 
-## Usage Permissions
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-### Personal and Commercial Use
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-The **untitledui-js** library is free to use in both personal and commercial projects.
-
-### Provided "As-Is"
-
-The library is distributed on an "as-is" basis, without warranties or guarantees of any kind. The maintainers and contributors are not responsible for any issues or damages that may arise from its use.
-
-## Prohibited Uses
-
-### Resale or Redistribution
-
-The library may not be sold, resold, or redistributed as a standalone product.
-
-### Forking and Republishing
-
-Forking this library and republishing it as a separate library—whether under the same or a different name—is strictly prohibited. Forks may only be used for personal or organizational purposes.
-
-## Extension of the Untitled UI Icons License
-
-This library is an extension of the **Untitled UI Icons License**. All usage must comply with the terms and conditions outlined in the Untitled UI Icons License.
-
----
-
-By using the **untitledui-js** library, you agree to adhere to the terms and restrictions specified above.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

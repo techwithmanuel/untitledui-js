@@ -1,35 +1,101 @@
 <p align="center">
-  <img src="./public/logo.png" alt="Motion logo" width="100" height="100" />
+  <img src="./public/logo.png" alt="Untitled UI Logo" width="100" height="100">
 </p>
 
 <h1 align="center">Untitled UI Icons</h1>
 
 <h3 align="center">
-  The official library for using Untitled UI icons with JavaScript. <br>
-  Supports Vue JS, React JS, Solid JS, and Qwik JS.
+  The Universal JavaScript Icon Library for Untitled UI<br>
+  Full SVG Support for React, Vue, Solid, and Qwik
 </h3>
 
+## Overview
+
+`untitledui-js` is the officially sanctioned JavaScript implementation of the Untitled UI icon system, developed with direct approval from Jordan Hughes (Untitled UI founder). This library provides:
+
+- Full SVG compliance with all standard attributes and methods
+- Framework-specific implementations for:
+  - React (v17+)
+  - Vue (v3+)
+  - SolidJS (v1+)
+  - Qwik (v1+)
+- TypeScript-first architecture
+- Motion integration (React only)
+- Tree-shaking support
+- Semantic versioning
+
+**Official Design System**: [Untitled UI](http://untitledui.com)
+
 ---
 
-## Preface
+## Installation
 
-`untitledui-js` is now the official library for using Untitled UI icons in JavaScript. This change was approved by Jordan Hughes from Untitled UI, ensuring the legality and long-term safety of the library.
+```bash
+# Base installation (framework-agnostic)
+npm install untitledui-js
 
-To support this transition, the library has been rewritten from the ground up for consistency across frameworks. The new version emphasizes type safety and an improved developer experience. Moving forward, the current syntax and system are designed to avoid breaking changes.
-
-A notable change is that `untitledui-js` is now the primary library for both animated and non-animated icons. As a result, `untitledui-js-base` will no longer be supported.
-
-Official link: [Untitled UI Icons](http://untitledui.com)
+# React with motion support
+npm install untitledui-js motion
+```
 
 ---
 
-## Upgrade to v2.3.0 for React JS
+## Version Compatibility
 
-### Key Changes
+| Framework | Supported Versions | Motion Support |
+| --------- | ------------------ | -------------- |
+| React     | 17.x, 18.x, 19.x   | Yes            |
+| Vue       | 3.x                | No             |
+| Solid     | 1.x                | No             |
+| Qwik      | 1.x                | No             |
 
-If you previously used `pathProps` to animate icons, note that a new animation pattern is now required. While the new approach no longer directly adjusts path properties, it introduces more robust options for animating both the path properties and the SVG itself.
+---
 
-### Previous React Versions:
+## Core Principles
+
+### 1. SVG Compliance
+
+All icons are pure SVG components supporting:
+
+- Standard SVG attributes (`viewBox`, `fill`, `stroke`, etc.)
+- Direct DOM manipulation
+- Class-based styling
+- Inline style overrides
+- Accessibility attributes (`aria-*`, `role`, etc.)
+
+### 2. Framework Consistency
+
+Identical API surface across frameworks:
+
+```tsx
+// React/Solid/Qwik
+<Icon size={24} color="currentColor" />
+
+<!-- Vue -->
+<icon :size="24" color="var(--primary)" />
+```
+
+### 3. Motion Integration (React Only)
+
+```tsx
+import { motion } from "motion/react";
+
+<Icon
+  animation={{
+    motion: motion,
+    attributes: {
+      svg: { whileHover: { scale: 1.1 } },
+      path: { transition: { duration: 0.5 } },
+    },
+  }}
+/>;
+```
+
+---
+
+## React Migration Guide (v2.3.0+)
+
+### Before: Legacy Pattern
 
 ```tsx
 import { Activity } from "untitledui-js";
@@ -37,20 +103,16 @@ import { Activity } from "untitledui-js";
 function App() {
   return (
     <Activity
-      // motion properties
-      pathProps={
-        {
-          // motion properties
-        }
-      }
+      pathProps={{
+        initial: { opacity: 0 },
+        animate: { opacity: 1 },
+      }}
     />
   );
 }
 ```
 
-### New Pattern (v2.3.0+):
-
-The new pattern introduces the motion library as an argument for animations, making animations conditional.
+### After: Modern Pattern
 
 ```tsx
 import { Activity } from "untitledui-js/react";
@@ -63,10 +125,14 @@ function App() {
         motion: motion,
         attributes: {
           svg: {
-            // motion attributes
+            initial: { rotate: 0 },
+            animate: { rotate: 360 },
+            transition: { duration: 1 },
           },
           path: {
-            // motion attributes
+            initial: { rotate: 0 },
+            animate: { rotate: 360 },
+            transition: { duration: 1 },
           },
         },
       }}
@@ -75,47 +141,95 @@ function App() {
 }
 ```
 
-## Usage in other frameworks
+**Key Changes:**
 
-### Vue JS (motion not supported)
+- Separate SVG/path animations
+- Explicit motion library declaration
+- Type-safe animation properties
+- No side effects in static implementations
+
+---
+
+## Framework Implementations
+
+### Vue 3
 
 ```html
 <template>
-  <Activity />
+  <Activity :size="24" class="icon-primary" />
 </template>
 
-<script>
+<script setup>
   import { Activity } from "untitledui-js/vue";
-
-  export default {
-    components: {
-      Activity,
-    },
-  };
 </script>
 ```
 
-### Qwik JS (motion not supported)
+### Qwik
 
 ```tsx
 import { component$ } from "@builder.io/qwik";
 import { Activity } from "untitledui-js/qwik";
 
 export default component$(() => {
-  return (
-    <div>
-      <Activity />
-    </div>
-  );
+  return <Activity style={{ color: "#3b82f6" }} />;
 });
 ```
 
-### Solid JS (motion not supported)
+### SolidJS
 
 ```tsx
 import { Activity } from "untitledui-js/solid";
 
 function App() {
-  return <Activity />;
+  return <Activity fill="none" stroke="currentColor" stroke-width="2" />;
 }
 ```
+
+---
+
+## SVG Customization
+
+All SVG properties and methods are fully supported:
+
+### Class-Based Styling
+
+```tsx
+<Activity className="icon-lg text-red-500 hover:scale-110" />
+```
+
+### Inline Styles
+
+```tsx
+<Activity
+  style={{
+    width: "2rem",
+    height: "2rem",
+    filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.25))",
+  }}
+/>
+```
+
+### Direct Attribute Access
+
+```tsx
+<Activity aria-label="Active indicator" role="img" data-custom="value" />
+```
+
+---
+
+## Contribution Guidelines
+
+1. **Icon Updates**: Submit SVG files through PRs to `src/raw-icons`
+2. **Version Bumps**: Use `npm run version` (semantic versioning enforced)
+3. **Type Safety**: All icons must pass `tsc --strict` checks
+4. **Framework Parity**: Changes must be implemented across all frameworks
+
+---
+
+## License
+
+MIT License  
+Copyright (c) 2023 Untitled UI & Contributors  
+See [LICENSE.md](./LICENSE.md) for full text.
+
+[GitHub Repository](https://github.com/techwithmanuel/untitledui-js)

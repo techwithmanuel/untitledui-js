@@ -23,6 +23,7 @@
       "types": "./dist/qwik/index.d.ts"
     }
   },
+  "license": "MIT",
   "files": [
     "dist",
     "package.json",
