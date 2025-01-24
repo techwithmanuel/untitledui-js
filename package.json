@@ -1,6 +1,6 @@
 {
   "name": "untitledui-js",
-  "version": "2.2.20",
+  "version": "2.2.21",
   "exports": {
     "./react": {
       "import": "./dist/react/index.mjs",
@@ -69,5 +69,22 @@
     "react": "^19.0.0",
     "solid-js": "^1.9.3",
     "vue": "^3.5.13"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    },
+    "solid-js": {
+      "optional": true
+    },
+    "@builder.io/qwik": {
+      "optional": true
+    },
+    "motion": {
+      "optional": true
+    }
   }
 }
