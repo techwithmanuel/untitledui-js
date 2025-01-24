@@ -1,6 +1,6 @@
 {
   "name": "untitledui-js",
-  "version": "2.2.21",
+  "version": "2.2.22",
   "exports": {
     "./react": {
       "import": "./dist/react/index.mjs",
@@ -64,11 +64,11 @@
     "unplugin-vue": "^5.2.1"
   },
   "peerDependencies": {
-    "@builder.io/qwik": "^1.12.0",
-    "motion": "^11.15.0",
-    "react": "^19.0.0",
-    "solid-js": "^1.9.3",
-    "vue": "^3.5.13"
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "vue": "^3.0.0",
+    "solid-js": "^1.0.0",
+    "@builder.io/qwik": "^1.0.0",
+    "motion": "^10.0.0 || ^11.0.0"
   },
   "peerDependenciesMeta": {
     "react": {
