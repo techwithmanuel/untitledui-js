@@ -4,3 +4,4 @@ dist
 .DS_Store
 pnpm-lock.yaml
 docs
+doc-assets
