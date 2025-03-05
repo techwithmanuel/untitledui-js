@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  Javascript Library for Untitled UI Icons<br>
+  The Official Javascript Library for Untitled UI Icons<br>
   Full SVG Support for React, Vue, Solid, Qwik
 </p>
 
