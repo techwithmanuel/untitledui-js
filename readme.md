@@ -2,10 +2,10 @@
   <img src="https://untitledui.publicsource.space/logo.svg" alt="Untitled UI Logo" width="100" height="100">
 </p>
 
-<h3 style="text-align: center;">
+<p align="center">
   Javascript Library for Untitled UI Icons<br>
-  <small>Full SVG Support for React, Vue, Solid, Qwik</small>
-</h3>
+  Full SVG Support for React, Vue, Solid, Qwik
+</p>
 
 ## Overview
 
