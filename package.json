@@ -1,26 +1,31 @@
 {
   "name": "untitledui-js",
-  "version": "2.2.232",
+  "version": "2.3.0",
   "exports": {
     "./react": {
+      "types": "./dist/react/index.d.ts",
       "import": "./dist/react/index.mjs",
-      "require": "./dist/react/index.js",
-      "types": "./dist/react/index.d.ts"
+      "require": "./dist/react/index.js"
     },
     "./vue": {
+      "types": "./dist/vue/index.d.ts",
       "import": "./dist/vue/index.mjs",
-      "require": "./dist/vue/index.js",
-      "types": "./dist/vue/index.d.ts"
+      "require": "./dist/vue/index.js"
     },
     "./solid": {
+      "types": "./dist/solid/index.d.ts",
       "import": "./dist/solid/index.mjs",
-      "require": "./dist/solid/index.js",
-      "types": "./dist/solid/index.d.ts"
+      "require": "./dist/solid/index.js"
     },
     "./qwik": {
+      "types": "./dist/qwik/index.d.ts",
       "import": "./dist/qwik/index.mjs",
-      "require": "./dist/qwik/index.js",
-      "types": "./dist/qwik/index.d.ts"
+      "require": "./dist/qwik/index.js"
+    },
+    "./svelte": {
+      "types": "./dist/svelte/index.d.ts",
+      "import": "./dist/svelte/index.mjs",
+      "require": "./dist/svelte/index.js"
     }
   },
   "license": "MIT",
@@ -49,6 +54,8 @@
     "vue",
     "solid",
     "qwik",
+    "svelte",
+    "svelte kit",
     "open source"
   ],
   "repository": {
@@ -69,6 +76,7 @@
     "motion": "^10.0.0 || ^11.0.0 || ^12.0.0",
     "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
     "solid-js": "^1.0.0",
+    "svelte": "^5.0.0",
     "vue": "^3.0.0"
   },
   "peerDependenciesMeta": {
@@ -82,6 +90,9 @@
       "optional": true
     },
     "@builder.io/qwik": {
+      "optional": true
+    },
+    "svelte": {
       "optional": true
     },
     "motion": {

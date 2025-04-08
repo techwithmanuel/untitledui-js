@@ -43,4 +43,14 @@ export default defineConfig([
     tsconfig: "packages/qwik/tsconfig.json",
     external: ["@builder.io/qwik"],
   },
+  {
+    entry: ["packages/svelte/index.ts"],
+    format: ["esm", "cjs"],
+    outDir: "dist/svelte",
+    minify: true,
+    dts: true,
+    clean: true,
+    tsconfig: "packages/svelte/tsconfig.json",
+    external: ["svelte"],
+  },
 ]);

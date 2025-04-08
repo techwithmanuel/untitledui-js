@@ -4,7 +4,7 @@
 
 <p align="center">
   The Official Javascript Library for Untitled UI Icons<br>
-  Full SVG Support for React, Vue, Solid, Qwik
+  Full SVG Support for React, Vue, Solid, Qwik, Svelte
 </p>
 
 ## Overview
@@ -12,7 +12,7 @@
 Official JavaScript implementation of Untitled UI icons. Features:
 
 - Full [SVG specification](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute) support
-- Framework packages: React (17+), Vue 3, SolidJS, Qwik
+- Framework packages: React (17+), Vue 3, SolidJS, Qwik, Svelte
 - TypeScript-first
 - Tree-shaking
 - Semantic versioning
@@ -72,6 +72,7 @@ All icons support standard [SVG attributes](https://developer.mozilla.org/en-US/
 | React        | 17+     |
 | Vue          | 3+      |
 | Solid & Qwik | 1+      |
+| Svelte       | 5+      |
 
 ## License
 
