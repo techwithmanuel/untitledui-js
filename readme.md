@@ -17,7 +17,7 @@ No further library name changes will be made in the future.
 
 ## Migration Examples
 
-### From `untitledui-js-base` → `@untitledui/icons-react`
+### From `untitledui-js-base` → `@untitled-icons/react`
 
 ```tsx
 // Before
