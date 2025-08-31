@@ -5,3 +5,5 @@ dist
 pnpm-lock.yaml
 docs
 doc-assets
+src/icons
+src/packages

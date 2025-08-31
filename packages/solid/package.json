@@ -1,0 +1,25 @@
+{
+  "name": "@untitled-icons/solid",
+  "version": "0.0.1",
+  "main": "dist/solid/index.js",
+  "module": "dist/solid/index.mjs",
+  "types": "dist/solid/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "solid-js": ">=1.0.0 <2.0.0"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "description": "Official Untitled UI Icons packaged for SolidJS. Framework-specific wrapper for the Untitled UI icon set with full SVG and TypeScript support.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techwithmanuel/untitledui-js.git",
+    "directory": "packages/solid"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

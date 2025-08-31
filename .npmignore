@@ -1,9 +1,0 @@
-node_modules
-icons
-packages
-.gitignore
-pnpm-lock.yaml
-.DS_Store
-docs
-tsup.config.ts
-doc-assets

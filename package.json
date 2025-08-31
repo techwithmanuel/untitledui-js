@@ -1,91 +1,16 @@
 {
-  "name": "untitledui-js",
-  "version": "2.2.232",
-  "exports": {
-    "./react": {
-      "import": "./dist/react/index.mjs",
-      "require": "./dist/react/index.js",
-      "types": "./dist/react/index.d.ts"
-    },
-    "./vue": {
-      "import": "./dist/vue/index.mjs",
-      "require": "./dist/vue/index.js",
-      "types": "./dist/vue/index.d.ts"
-    },
-    "./solid": {
-      "import": "./dist/solid/index.mjs",
-      "require": "./dist/solid/index.js",
-      "types": "./dist/solid/index.d.ts"
-    },
-    "./qwik": {
-      "import": "./dist/qwik/index.mjs",
-      "require": "./dist/qwik/index.js",
-      "types": "./dist/qwik/index.d.ts"
-    }
-  },
-  "license": "MIT",
-  "files": [
-    "dist",
-    "package.json",
-    "LICENSE.md",
-    "README.md"
+  "private": true,
+  "workspaces": [
+    "packages/*"
   ],
-  "keywords": [
-    "react",
-    "untitledui",
-    "inline",
-    "icons",
-    "svg",
-    "design",
-    "customizable",
-    "framer",
-    "motion",
-    "typescript",
-    "animation",
-    "javascript",
-    "icons library",
-    "next",
-    "next",
-    "vue",
-    "solid",
-    "qwik",
-    "open source"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/techwithmanuel/untitledui-js.git"
-  },
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "publish": "pnpm -r publish --access public"
   },
   "devDependencies": {
-    "@types/react": "^19.0.2",
-    "tsup": "^8.3.5",
-    "typescript": "^5.7.2",
-    "unplugin-vue": "^5.2.1"
-  },
-  "peerDependencies": {
-    "@builder.io/qwik": "^1.0.0",
-    "motion": "^10.0.0 || ^11.0.0 || ^12.0.0",
-    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
-    "solid-js": "^1.0.0",
-    "vue": "^3.0.0"
-  },
-  "peerDependenciesMeta": {
-    "react": {
-      "optional": true
-    },
-    "vue": {
-      "optional": true
-    },
-    "solid-js": {
-      "optional": true
-    },
-    "@builder.io/qwik": {
-      "optional": true
-    },
-    "motion": {
-      "optional": true
-    }
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2",
+    "esbuild-svelte": "^0.9.3",
+    "unplugin-vue": "^7.0.1"
   }
 }

@@ -1,0 +1,25 @@
+{
+  "name": "@untitled-icons/icons",
+  "version": "0.0.1",
+  "main": "dist/svelte/index.js",
+  "module": "dist/svelte/index.mjs",
+  "types": "dist/svelte/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "svelte": ">=3.0.0 <6.0.0"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "description": "Official Untitled UI Icons packaged for Svelte. Framework-specific wrapper for the Untitled UI icon set with full SVG and TypeScript support.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techwithmanuel/untitledui-js.git",
+    "directory": "packages/svelte"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
